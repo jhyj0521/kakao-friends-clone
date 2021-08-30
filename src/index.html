@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오프렌즈샵</title>
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -245,7 +247,8 @@
                                 <a href="#" class="menu-other__link">고객센터</a>
                             </li>
                             <li class="menu-other__item">
-                                <a href="#" class="menu-other__link">기프트카드 조회<span aria-hidden="true">&#183;</span>환불</a>
+                                <a href="#" class="menu-other__link">기프트카드 조회<span
+                                        aria-hidden="true">&#183;</span>환불</a>
                             </li>
                             <li class="menu-other__item">
                                 <a href="#" class="menu-other__link">브랜드 스토리</a>
@@ -258,6 +261,699 @@
                 </ul>
             </nav>
         </header>
+        <main class="main">
+            <!-- 메인 탭 -->
+            <div class="main-tap">
+                <ul class="main-tap__list" role="tablist">
+                    <li class="main-tap__item" role="tab" aria-selected="true" aria-controls="today-tap" id="today">
+                        <button class="main-tap__button-today">오늘</button>
+                    </li>
+                    <li class="main-tap__item" role="tab" aria-selected="false" aria-controls="newItem-tab"
+                        id="newItem">
+                        <button class="main-tap__button-new">신규</button>
+                    </li>
+                    <li class="main-tap__item" role="tab" aria-selected="false" aria-controls="favorite-tab"
+                        id="favorite">
+                        <button class="main-tap__button-favorite">인기</button>
+                    </li>
+                    <li class="main-tap__item" role="tab" aria-selected="false" aria-controls="my-tab" id="my">
+                        <button class="main-tap__button-my">마이</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- 오늘 컨텐츠 -->
+            <div class="main-content__today" role="tabpanel" id="today-tap" aria-labelledby="today">
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+                </article>
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+
+                    <ul class="related">
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 무드등</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                    </ul>
+                </article>
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+                    <ul class="related">
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 무드등</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                    </ul>
+                </article>
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+                    <ul class="related">
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 무드등</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                    </ul>
+                </article>
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+                    <ul class="related">
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 무드등</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                    </ul>
+                </article>
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+                    <ul class="related">
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 무드등</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                    </ul>
+                </article>
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+                    <ul class="related">
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 무드등</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                    </ul>
+                </article>
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+                    <ul class="related">
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 무드등</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                    </ul>
+                </article>
+                <article class="feed">
+                    <header class="feed-header">
+                        <a href="#" class="feed-header__image"></a>
+                        <span class="feed-header__name">라이언</span>
+                        <time class="feed-header__date" datetime=""></time>
+                    </header>
+                    <section class="feed-contents">
+                        <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                        <p class="feed-contents__subcopy">
+                            티끌모아 태산💵
+                            춘식이에게 동전을 맡겨주세요.🐱
+                            저금하면 신나는 멜로디까지!🎶
+                        </p>
+                        <div class="feed-contents__image">
+
+                        </div>
+                        <a href="#" class="feed-contents__link">
+                            <div class="feed-contents__link-box">
+                                <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                                <span class="feed-contents__link-arrow"></span>
+                            </div>
+                        </a>
+                        <ul class="actions">
+                            <li class="actions__item">
+                                <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                            </li>
+                            <li class="actions__item">
+                                <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                            </li>
+                        </ul>
+                        <span class="feed-contents__like">
+                            좋아요
+                            <b class="feed-contents__like-count">1,094</b>
+                            개
+                        </span>
+                    </section>
+                    <footer class="feed-comment">
+                        <span class="feed-comment__count">댓글 346개</span>
+                        <div class="feed-comment__recent"><b>소*</b>
+                            <p>마우스나 살까?</p>
+                        </div>
+                        <a href="#" class="feed-comment__link">댓글 달기</a>
+                    </footer>
+
+                    <ul class="related">
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 무드등</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                        <li class="related__item">
+                            <a href="#">
+                                <img src="" alt="" class="related__item-image">
+                                <div class="related__item-info">
+                                    <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                                </div>
+                            </a>
+                            <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                        </li>
+                    </ul>
+                </article>
+                <button class="button-more" type="button">스토리 더보기</button>
+                <button class="button-top" type="button" aria-label="위로 가기"></button>
+            </div>
+            <!-- 신규 아이템 -->
+            <div class="main-content__new" role="tabpanel" id="newItem-tab" aria-labelledby="newItem" hidden="hidden">
+
+                <button type="button">TOP</button>
+            </div>
+            <!-- 인기 아이템 -->
+            <div class="main-content__favorite" role="tabpanel" id="favorite-tab" aria-labelledby="favorite"
+                hidden="hidden">
+
+                <button type="button">TOP</button>
+            </div>
+            <!-- 마이 -->
+            <div class="main-content__my" role="tabpanel" id="my-tab" aria-labelledby="my" hidden="hidden">
+                <button type="button">TOP</button>
+            </div>
+        </main>
     </div>
 </body>
+
 </html>
