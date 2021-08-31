@@ -1,4 +1,6 @@
 import './sass/index.scss';
+import './slider.js';
+
 
 // 헤더 버튼
 const menuOpenBtn = document.querySelector('.button-menu-open');
@@ -37,6 +39,5 @@ buttonSearch.addEventListener('click', () => {
 })
 
 buttonSearchCancel.addEventListener('click', () => {
-    console.log(1);
     searchWrap.classList.remove('search-wrap--active');
 });
