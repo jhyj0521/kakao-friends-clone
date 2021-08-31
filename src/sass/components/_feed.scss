@@ -1,0 +1,315 @@
+@use '../utils' as *;
+
+.feed {
+    margin: rem(20px);
+    padding: rem(20px) rem(20px) rem(30px);
+    line-height: 1.43;
+    letter-spacing: -0.22px;
+    
+    &-header {
+        margin-bottom: rem(16px);
+        
+        &__image {
+            float: left;
+            width: rem(40px);
+            height: rem(40px);
+            background-image: url(../assets/images/ryan.svg);
+            background-repeat: no-repeat;
+            margin-right: rem(10px);
+            vertical-align: middle;
+        }
+
+        &__name {
+            display: block;
+            margin-top: rem(3px);
+            font-size: rem(16px);
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        &__date {
+            font-size: 13px;
+            color: $gray6;
+            line-height: 1.5;
+            letter-spacing: -0.2px;
+        }
+    }
+
+    &-contents {
+        @include flexbox(column);
+
+        &__title {
+            order: 2;
+            font-size: rem(20px);
+            font-weight: bold;
+            letter-spacing: -0.31px;
+            margin-top: rem(12px);
+        }
+
+        &__subcopy {
+            order: 2;
+            margin-top: rem(10px);
+            word-break: break-all;
+            white-space: pre-line;
+            letter-spacing: -0.22px;
+            line-height: 1.43;
+        }
+
+        &__image {
+            .image-slide__wrap {
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        &__link {
+            display: block;
+            cursor: pointer;
+            margin-top: rem(12px);
+            border: 1px solid $black1;
+            border-radius: rem(8px);
+        }
+
+        &__link-box {
+            @include flexbox(row, space-between);
+            padding: rem(15px) rem(12px) rem(15px) rem(16px);
+        }
+
+        &__link-text {
+            font-size: rem(14px);
+            font-weight: bold;
+            line-height: 1.43;
+        }
+
+        &__link-arrow {
+            display: block;
+            width: rem(18px);
+            height: rem(18px);
+            background-image: url(../assets/images/arrow-small-right.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .actions {
+            margin-top: rem(10px);
+            
+            &__item {
+                float: left;
+            }
+
+            &__item:last-child {
+                float: right;
+            }
+
+            &__button-like {
+                border: 0;
+                width: rem(31x);
+                height: rem(31px);
+                padding: 0;
+                background-image: url(../assets/images/heart-burst.png);
+                background-color: transparent;
+                background-size: cover;
+            }
+
+            &__button-comment {
+                border: 0;
+                width: rem(27px);
+                height: rem(27px);
+                padding: 0;
+                margin-left: rem(12px);
+                background-image: url(../assets/images/reply-black.png);
+                background-size: cover;
+                background-color: transparent;
+            }
+
+            &__button-share {
+                border: 0;
+                width: rem(27px);
+                height: rem(27px);
+                padding: 0;
+                background-image: url(../assets/images/share-black.png);
+                background-size: cover;
+                background-color: transparent;
+            }
+        }
+
+        &__like {
+            margin-top: rem(12px);
+            font-size: rem(14px);
+            letter-spacing: -0.22px;
+            line-height: 1.43;
+        }
+
+        &__like-count {
+            font-weight: bold;
+        }
+    }
+
+    &-comment {
+        margin-top: rem(7px);
+
+        &__count {
+            font-size: rem(14px);
+            color: $gray6;
+        }
+
+        &__recent {
+            margin-top: rem(12px);
+            font-size: 14px;
+            line-height: 1.43;
+            letter-spacing: -0.22px;
+
+            b {
+                font-weight: bold;
+                margin-right: rem(7px);
+            }
+
+            p {
+                display: inline-block;
+                color: $gray5;
+            }
+        }
+
+        &__link {
+            display: block;
+            margin-top: rem(12px);
+            padding: rem(12px) rem(59px) rem(12px) rem(14px);
+            background-color: $gray7;
+            border-radius: 0px 24px 24px;
+            font-size: rem(14px);
+            color: $black2;
+        }
+    }
+
+    .related {
+        margin-top: rem(24px);
+        border: 1px solid $gray8;
+        border-radius: rem(10px);
+
+        &__item {
+            @include flexbox(row, space-between, center);
+            border-bottom: 1px solid $gray8;
+            padding: rem(5px) rem(12px) rem(5px) rem(8px);
+
+            &-image {
+                width: rem(70px);
+                height: rem(70px);
+                background-size: cover;
+                margin-right: rem(10px);
+            }
+
+            a {
+                @include flexbox(row, $align-items: center);
+            }
+
+            &-info {
+                span {
+                    font-size: rem(14px);
+                    color: $gray5;
+                }
+
+                b {
+                    display: block;
+                    font-weight: bold;
+                    line-height: 1.44;
+                    letter-spacing: -0.25px;
+                }
+            }
+
+            .button-cart {  
+                border: 0;
+                width: rem(24px);
+                height: rem(24px);
+                padding: 0;
+                background-image: url(../assets/images/cart.png);
+                background-size: cover;
+                background-color: transparent;
+                align-items: center;
+            }
+        }
+    }
+
+    @include desktop {
+        box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+    }
+}
+
+// 이미지 삽입 및 슬라이더
+.feed-contents__image {
+    max-width: rem(600px);
+    position: relative;
+    margin: auto;
+    
+}
+
+.image-slide__wrap {
+    display: none;
+    
+  }  
+
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: rem(16px);
+    margin-top: rem(-22px);
+    // color: white;
+    // font-weight: bold;
+    // font-size: 18px;
+    // transition: 0.6s ease;
+    // border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-image: url(../assets/images/feed-arrow-left.svg);
+    background-repeat: no-repeat;
+}
+
+  /* Position the "next button" to the right */
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: auto;
+    padding: rem(16px);
+    margin-top: rem(-22px);
+    // color: white;
+    // font-weight: bold;
+    // font-size: 18px;
+    // transition: 0.6s ease;
+    // border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-image: url(../assets/images/feed-arrow-right.png);
+    background-repeat: no-repeat;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: rem(11px)}
+  }
