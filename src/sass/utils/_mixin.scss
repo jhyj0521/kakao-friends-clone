@@ -1,0 +1,24 @@
+// mixin
+// Auto Margin을 활용한 박스 가운데 정렬
+@mixin autoMargin($marginX: auto) {
+    margin-left: $marginX;
+    margin-right: $marginX;
+}
+
+// 요소 박스의 최대 크기 설정 
+@mixin boxSizeMax($width: 1300px, $paddingX: 0) {
+    max-width: $width;
+    padding-left: $paddingX;
+    padding-right: $paddingX;
+    @include autoMargin();
+    @content;
+}
+
+// 요소 박스의 가로 크기를 뷰포트 기준 100vw로 설정
+@mixin boxSizeFull($width: 100vw) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw; //가운데정렬코드
+    @content;
+}
