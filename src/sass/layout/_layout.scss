@@ -1,5 +1,6 @@
 @use './../utils' as *;
 
-.container{
+.header, .main{
     @include boxSizeMax();
+    min-width: 394px;
 }

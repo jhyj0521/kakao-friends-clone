@@ -1,1 +1,58 @@
 // footer
+@use './../utils' as *;
+
+.footer{
+    @include boxSizeMax();
+    @include flexbox(column,space-between,flex-start);
+    position: relative;
+    min-width: rem(394px);
+    height: rem(175px);
+    background-color: $footer-background-color;
+
+    @include mobile{
+        padding: rem(50px) rem(16px) rem(64px);
+    }
+
+    @include desktop{
+        padding:rem(32px) rem(32px) rem(64px);
+    }
+
+    &-bg{
+        background-color: $footer-background-color;
+    }
+
+    &-menu{
+        @include flexbox();
+        order: -1;
+        font-size: rem(12px);
+        white-space: nowrap;
+
+        &__link{
+            word-spacing: -3px;
+        }
+
+        span{
+            @include mobile{
+                margin: 0 rem(5px);
+            }
+
+            @include desktop{
+                margin: 0 rem(7px);
+            }
+            
+        }
+    }
+}
+
+.badge{
+    position: absolute;
+    bottom: rem(50px);
+
+    @include mobile{
+        right: rem(16px);
+    }
+
+    @include desktop{
+        right: rem(32px);
+    }
+}
