@@ -8,6 +8,9 @@ const buttonCharacter = document.querySelector('.button-character');
 const menuCharacter = document.querySelector('.menu-character');
 const buttonCategory = document.querySelector('.button-category');
 const menuCategory = document.querySelector('.menu-category');
+const buttonSearch = document.querySelector('.utility__button-search');
+const buttonSearchCancel = document.querySelector('.search__button-cancel');
+const searchWrap = document.querySelector('.search-wrap');
 
 // 네비게이션 열기 버튼 클릭 시 전체 메뉴 열림
 menuOpenBtn.addEventListener('click', () => {
@@ -28,3 +31,12 @@ buttonCharacter.addEventListener('click', () => {
 buttonCategory.addEventListener('click', () => {
     menuCategory.classList.toggle('menu-category');
 })
+
+buttonSearch.addEventListener('click', () => {
+    searchWrap.classList.toggle('search-wrap--active');
+})
+
+buttonSearchCancel.addEventListener('click', () => {
+    console.log(1);
+    searchWrap.classList.remove('search-wrap--active');
+});

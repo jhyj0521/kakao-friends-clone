@@ -231,3 +231,216 @@
         margin-bottom: rem(60px);
     }
 }
+
+// search
+.search-wrap {
+    background-color: $white;
+
+    display: none;
+
+    &--active {
+        display: block;
+    }
+
+    @include desktop {
+        background-color: $yellow;
+        padding: rem(40px) 0 rem(35px) 0;
+    }
+}
+
+//검색폼 모바일 기준
+.search {
+
+    //검색 폼
+    &__form {
+        @include flexbox(row, center, center, nowrap);
+        width: 100%;
+        padding: 13px;
+    }
+
+    //검색어 입력창
+    &__input {
+        width: 100%;
+        height: 42px;
+        padding: rem(13px);
+        border: none;
+        border-radius: 60px;
+        background-color: $comment-background-color;
+
+        // @include desktop {
+        //     font-size: rem(16px);
+        //     color: black;
+        // }
+    }
+
+
+    //검색 - 버튼 리스트
+    &__button {
+        height: 100%;
+
+        //검색 버튼
+        &-submit {
+            background-image: url(/src/assets/images/search_button.svg);
+            background-repeat: no-repeat;
+            background-color: transparent;
+            border: none;
+            margin-left: rem(8px);
+            width: rem(25px);
+            height: rem(22px);
+
+        }
+
+        //취소 버튼
+        &-cancel {
+            width: rem(54px);
+            border: none;
+            background: transparent;
+
+            @include desktop {
+                font-size: rem(16px);
+            }
+        }
+    }
+
+    //검색-카테고리(제목)
+    &__heading-category {
+        margin-top: rem(22px);
+        margin-left: rem(20px);
+
+        @include desktop {
+            font-size: rem(15px);
+        }
+    }
+
+
+    //검색 - 캐릭터 리스트
+    &-character {
+        @include flexbox(row, $flex-wrap: wrap);
+        padding: rem(20px) rem(13px);
+
+        &__item {
+            @include flexbox(column, center, center, wrap);
+            width: rem(80px);
+            padding: rem(10px) 0;
+            margin: 0 rem(3px);
+
+            //캐릭터 사진
+            @at-root .search-character__link {
+                display: block;
+                padding-top: rem(70px);
+                width: rem(75px);
+                height: rem(75px);
+                background-size: auto 100%;
+                background-image: url(/src/assets/images/kakao.svg);
+                background-repeat: no-repeat;
+                margin-bottom: rem(22px);
+            }
+
+            //캐릭터 이름
+            span {
+                display: block;
+                text-align: center;
+                white-space: nowrap;
+                padding-top: rem(22px);
+                font-size: rem(12px);
+
+                @include desktop {
+                    font-size: rem(14px);
+                }
+            }
+        }
+
+        //캐릭터 스프라이트
+        .apeach {
+            background-position: -75px 0;
+        }
+
+        .muji {
+            background-position: -150px 0;
+        }
+
+        .prodo {
+            background-position: -225px 0;
+        }
+
+        .neo {
+            background-position: -300px 0;
+        }
+
+        .tube {
+            background-position: -375px 0;
+        }
+
+        .jayz {
+            background-position: -450px 0;
+        }
+
+        .con {
+            background-position: -525px 0;
+        }
+
+        .chunsik {
+            background-position: -600px 0;
+        }
+
+        .jordy {
+            background-position: -675px 0;
+        }
+
+        .scappy {
+            background-position: -750px 0;
+        }
+
+        .angmond {
+            background-position: -825px 0;
+        }
+
+        .penda {
+            background-position: -900px 0;
+        }
+
+        .keroBerony {
+            background-position: -975px 0;
+        }
+
+        .dream {
+            background-position: -1050px 0;
+        }
+    }
+
+    //검색 - 카테고리 리스트
+    &-category {
+        @include flexbox(row, $flex-wrap: wrap);
+        padding: rem(12px) rem(20px);
+
+        &__item {
+            border: 1px solid $category-border-color;
+            border-radius: rem(51px);
+            padding: 6px 13px;
+            background-color: $white;
+            margin: 0 7px 9px 0;
+        }
+
+        &__link {
+            height: 15px;
+            line-height: 1;
+            font-size: rem(14px);
+            white-space: nowrap;
+        }
+    }
+
+    // 검색 - 캐릭터, 카테고리 구분선
+    &__devide-line {
+        height: 1px;
+        display: block;
+        border: none;
+        background-color: $gray5;
+        margin: rem(24px) rem(20px);
+    }
+
+    // 데스크탑 기준 max-width 지정
+    @include desktop {
+        @include boxSizeMax(rem(654px));
+        background-color: $yellow;
+    }
+}
