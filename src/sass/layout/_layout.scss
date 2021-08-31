@@ -1,6 +1,0 @@
-@use './../utils' as *;
-
-.header, .main{
-    @include boxSizeMax();
-    min-width: 394px;
-}
