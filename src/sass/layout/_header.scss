@@ -1,1 +1,233 @@
+@use './../utils' as *;
 // header
+.header {
+    background-color: skyblue;
+
+    @include mobile {
+        &-wrap {
+            background-color: pink;
+            @include flexbox(row, space-between);
+        }
+    }
+
+}
+
+.header {
+    @include desktop {
+        background-color: #fff;
+    }
+}
+
+.logo { 
+    @include mobile {
+        padding-top: 2.93333vw;
+    }
+}
+
+.button-menu-open {
+    order: -1;    
+}
+
+@include desktop {
+    .button-menu-open {
+        display: none;
+    }
+}
+
+.utility {
+    @include flexbox;
+
+    &__button-global svg, &__button-search svg {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+// 전체 메뉴
+.navigation {
+    @include mobile {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100vh;
+        padding: 0 rem(30px);
+        background-color: $white;
+        overflow: auto;
+    }
+
+    @include mobile {
+        @at-root &--active {
+            display: block;
+        }
+    }
+}
+
+.ad-banner {
+    @include mobile {
+        position: absolute;
+        top: 90px;
+        left: 20px;
+        background-color: #fff;
+        z-index: 2;
+    }
+
+    &__button-close {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__link img {
+        @include mobile {
+            border-radius: rem(15px);
+            max-width: 94%;
+        }
+    }
+}
+
+// 메뉴 버튼
+.button-member {
+    @include mobile {
+        display: none;
+    }
+}
+.button-character, .button-category {
+    @include mobile {
+        display: inline-block;
+        width: 100%;
+        padding: rem(20px) 0;
+        text-align: left;
+        border: none;
+        background-color: $white;
+    }
+}
+.button-other {
+    @include mobile {
+        display: none;
+    }
+}
+.button-menu-close {
+    @include mobile {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+// 메뉴 멤버
+.menu {
+    font-size: rem(20px);
+
+    .member {
+        margin-top: rem(50px);
+    }
+}
+.menu-member {
+    @include mobile {
+        position: relative;
+
+        &__link.login {
+            font-weight: 700;
+        }
+
+        &__link.non-member-order {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: rem(17px);
+        }
+
+        &__link.shopping-basket,
+        &__link.order {
+            display: inline-block;
+            width: 100%;
+            padding: rem(25px) 0;
+        }
+
+        &__item.shopping-basket {
+            margin-top: rem(100px);
+        }
+
+        &__item.order:after {
+            content: "";
+            display: block;
+            border-bottom: 1px solid $gray2;
+        }
+    }
+}
+
+.menu .character {
+    @include mobile {
+        padding-top: rem(20px);
+    }
+}
+
+.menu-character {
+    @include mobile {
+        background-color: skyblue;
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}
+
+.menu .category:after {
+    @include mobile {
+        content: "";
+        display: block;
+        padding-top: rem(20px);
+        border-bottom: 1px solid $gray2;
+    }
+}
+
+.menu-category {
+    @include mobile {
+        background-color: pink;
+        display: none;
+
+        &--active {
+            display: block;
+       }
+    }
+}
+
+.menu-other {
+    &__link {
+        display: inline-block;
+        width: 100%;
+        padding: rem(25px) 0;
+    }
+
+    &__item.notice {
+        padding-top: rem(20px);
+    }
+
+    &__item.center:after {
+        content: "";
+        display: block;
+        padding-top: rem(20px);
+        border-bottom: 1px solid $gray2;
+    }
+
+    &__item.giftcard {
+        padding-top: rem(20px);
+    }
+
+    &__item.giftcard:after {
+        content: "";
+        display: block;
+        padding-top: rem(20px);
+        border-bottom: 1px solid $gray2;
+    }
+
+    &__item.brand-story {
+        padding-top: rem(20px);
+    }
+
+    &__item.store-inform {
+        margin-bottom: rem(60px);
+    }
+}
