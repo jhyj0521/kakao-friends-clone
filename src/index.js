@@ -1,5 +1,6 @@
 import './sass/index.scss';
-import './slider.js';
+require('flickity');
+// import './slider.js';
 
 
 // 헤더 버튼

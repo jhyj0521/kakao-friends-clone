@@ -1,14 +1,14 @@
-@use '../utils' as *;
+@use '../utils'as *;
 
 .feed {
     margin: rem(20px);
     padding: rem(20px) rem(20px) rem(30px);
     line-height: 1.43;
     letter-spacing: -0.22px;
-    
+
     &-header {
         margin-bottom: rem(16px);
-        
+
         &__image {
             float: left;
             width: rem(40px);
@@ -56,11 +56,9 @@
         }
 
         &__image {
-            .image-slide__wrap {
-                img {
-                    width: 100%;
-                    border-radius: 10px;
-                }
+            
+            div {
+                border-radius: 10px;
             }
         }
 
@@ -94,7 +92,7 @@
 
         .actions {
             margin-top: rem(10px);
-            
+
             &__item {
                 float: left;
             }
@@ -193,6 +191,10 @@
             border-bottom: 1px solid $gray8;
             padding: rem(5px) rem(12px) rem(5px) rem(8px);
 
+            &:last-child {
+                border-bottom: none;
+            }
+
             &-image {
                 width: rem(70px);
                 height: rem(70px);
@@ -218,7 +220,7 @@
                 }
             }
 
-            .button-cart {  
+            .button-cart {
                 border: 0;
                 width: rem(24px);
                 height: rem(24px);
@@ -238,78 +240,95 @@
 }
 
 // 이미지 삽입 및 슬라이더
-.feed-contents__image {
-    max-width: rem(600px);
-    position: relative;
-    margin: auto;
-    
-}
+// .feed-contents__image {
+//     max-width: rem(600px);
+//     position: relative;
+//     margin: auto;
 
-.image-slide__wrap {
-    display: none;
-    
-  }  
+// }
 
-.prev {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: rem(16px);
-    margin-top: rem(-22px);
-    // color: white;
-    // font-weight: bold;
-    // font-size: 18px;
-    // transition: 0.6s ease;
-    // border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-image: url(../assets/images/feed-arrow-left.svg);
-    background-repeat: no-repeat;
-}
+// .image-slide__wrap {
+//     display: none;
 
-  /* Position the "next button" to the right */
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: auto;
-    padding: rem(16px);
-    margin-top: rem(-22px);
-    // color: white;
-    // font-weight: bold;
-    // font-size: 18px;
-    // transition: 0.6s ease;
-    // border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-image: url(../assets/images/feed-arrow-right.png);
-    background-repeat: no-repeat;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
+// }
 
-  /* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
+// .prev {
+//     cursor: pointer;
+//     position: absolute;
+//     top: rem(186px);
+//     left: rem(16px);
+//     width: rem(27px);
+//     height: rem(27px);
+//     // color: white;
+//     // font-weight: bold;
+//     // font-size: 18px;
+//     // transition: 0.6s ease;
+//     // border-radius: 0 3px 3px 0;
+//     // user-select: none;
+//     background-image: url(../assets/images/arrow-medium-circle-left-white.png);
+//     background-repeat: no-repeat;
+//     background-size: contain;
+// }
 
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: rem(11px)}
-  }
+// /* Position the "next button" to the right */
+// .next {
+//     cursor: pointer;
+//     position: absolute;
+//     top: rem(186px);
+//     right: rem(16px);
+//     width: rem(27px);
+//     height: rem(27px);
+//     // color: white;
+//     // font-weight: bold;
+//     // font-size: 18px;
+//     // transition: 0.6s ease;
+//     // border-radius: 0 3px 3px 0;
+//     // user-select: none;
+//     background-image: url(../assets/images/arrow-medium-circle-right-white.png);
+//     background-repeat: no-repeat;
+//     background-size: contain;
+// }
+
+// /* On hover, add a black background color with a little bit see-through */
+// // .prev:hover,
+// // .next:hover {
+// //     background-color: rgba(0, 0, 0, 0.8);
+// // }
+
+// /* Fading animation */
+// .fade {
+//     -webkit-animation-name: fade;
+//     -webkit-animation-duration: 1.5s;
+//     animation-name: fade;
+//     animation-duration: 1.5s;
+// }
+
+// @-webkit-keyframes fade {
+//     from {
+//         opacity: .4
+//     }
+
+//     to {
+//         opacity: 1
+//     }
+// }
+
+// @keyframes fade {
+//     from {
+//         opacity: .4
+//     }
+
+//     to {
+//         opacity: 1
+//     }
+// }
+
+/* On smaller screens, decrease text size */
+// @media only screen and (max-width: 300px) {
+
+//     .prev,
+//     .next,
+//     .text {
+//         font-size: rem(11px)
+//     }
+// }

@@ -20,7 +20,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, paths.dist),
     port: process.env.PORT,
-    writeToDisk: true,
+    writeToDisk: false,
     compress: true,
     overlay: true,
     hot: true,
