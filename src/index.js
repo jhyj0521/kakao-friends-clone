@@ -14,6 +14,10 @@ const menuCategory = document.querySelector('.menu-category');
 const buttonSearch = document.querySelector('.utility__button-search');
 const buttonSearchCancel = document.querySelector('.search__button-cancel');
 const searchWrap = document.querySelector('.search-wrap');
+const buttonBannerClose = document.querySelector('.ad-banner__button-close');
+const adBanner = document.querySelector('.ad-banner');
+const headerWrap = document.querySelector('.header-wrap');
+const media = matchMedia("screen and (min-width: 768px)"); 
 
 // 네비게이션 열기 버튼 클릭 시 전체 메뉴 열림
 menuOpenBtn.addEventListener('click', () => {
@@ -42,3 +46,28 @@ buttonSearch.addEventListener('click', () => {
 buttonSearchCancel.addEventListener('click', () => {
     searchWrap.classList.remove('search-wrap--active');
 });
+
+//배너 닫기 버튼
+buttonBannerClose.addEventListener('click', () => {
+    // ad-banner--active 클래스 제거
+    // headerWrap 배너 크기만큼 위로 이동
+    adBanner.classList.remove('ad-banner--active');
+    headerWrap.setAttribute('style', 'transform:translateY(-65px)');
+});
+
+media.addListener((e) => {
+    //모바일
+    if(!e.matches){
+        headerWrap.setAttribute('style', 'transform:none');
+        adBanner.setAttribute('style','transform:none');
+    }
+    //데스크탑
+    else{
+        if(!adBanner.classList.contains('ad-banner--active')){
+            headerWrap.setAttribute('style', 'transform:translateY(-65px)');
+        }else{
+            adBanner.setAttribute('style','transform:translateY(-155px)');
+        }
+    }
+});
+
