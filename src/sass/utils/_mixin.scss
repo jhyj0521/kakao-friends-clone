@@ -13,3 +13,12 @@
     @include autoMargin();
     @content;
 }
+
+// 요소 박스의 가로 크기를 뷰포트 기준 100vw로 설정
+@mixin boxSizeFull($width: 100vw) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw; //가운데정렬코드
+    @content;
+}
