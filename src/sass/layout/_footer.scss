@@ -42,17 +42,9 @@
             
         }
     }
-}
 
-.badge{
-    position: absolute;
-    bottom: rem(50px);
-
-    @include mobile{
-        right: rem(16px);
-    }
-
-    @include desktop{
-        right: rem(32px);
+    &-logo{
+        width: 100%;
+        @include flexbox(row,space-between,flex-start);
     }
 }
