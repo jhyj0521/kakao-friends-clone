@@ -38,5 +38,8 @@
     "not dead",
     "> 1% in KR",
     "ie 11"
-  ]
+  ],
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
 }

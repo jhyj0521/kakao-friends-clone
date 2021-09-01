@@ -1,5 +1,6 @@
 import './sass/index.scss';
 import './btn-top.js';
+import anime from 'animejs/lib/anime.es.js';
 // import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 // import 'swiper/css';
 // import 'swiper/css/navigation';
@@ -160,3 +161,21 @@ function init() {
     }
 }
 init();
+
+
+// 애니메이션
+anime({
+    targets: '.feed',
+    duration: function (t, i) {
+        return 600 + i * 75;
+    },
+    easing: 'easeOutExpo',
+    delay: function (t, i) {
+        return i * 50;
+    },
+    opacity: {
+        value: [0, 1],
+        easing: 'linear'
+    },
+    scale: [0, 1]
+});
