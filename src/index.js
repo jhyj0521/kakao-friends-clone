@@ -1,4 +1,6 @@
 import './sass/index.scss';
+import './btn-top.js';
+import './btn-more.js';
 // import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 // import 'swiper/css';
 // import 'swiper/css/navigation';
@@ -22,7 +24,6 @@ import './sass/index.scss';
 // require('flickity');
 // require('flickity-imagesloaded');
 // require('flickity-fullscreen');
-
 
 // 헤더 버튼
 const menuOpenBtn = document.querySelector('.button-menu-open');
