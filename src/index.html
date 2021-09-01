@@ -290,6 +290,7 @@
         </div>
         <!-- 오늘 컨텐츠 -->
         <div class="main-content__today" role="tabpanel" id="today-tap" aria-labelledby="today">
+            <!-- Feed-1 -->
             <article class="feed">
                 <header class="feed-header">
                     <a href="#" class="feed-header__image"></a>
@@ -302,23 +303,18 @@
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
-                    <div class="feed-contents__image js-flickity"
-                        data-flickity='{ "cellAlign": "left", "contain": true }'>
+                    <div class="feed-contents__image">
                         <div class="image-slide__wrap">
                             <img src="./assets/images/feed-image1.jpg">
                         </div>
                         
-                        <div class="image-slide__wrap">
+                        <!-- <div class="image-slide__wrap">
                             <img src="./assets/images/feed-image2.jpg">
                         </div>
                         
                         <div class="image-slide__wrap">
                             <img src="./assets/images/feed-image3.jpg">
-                        </div>
-                        
-                        <!-- Next and previous buttons -->
-                        <!-- <a class="prev" onclick="plusSlides(-1)"></a>
-                        <a class="next" onclick="plusSlides(1)"></a> -->
+                        </div> -->
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -379,6 +375,7 @@
                     </li>
                 </ul>
             </article>
+            <!-- Feed-2 -->
             <article class="feed">
                 <header class="feed-header">
                     <a href="#" class="feed-header__image"></a>
@@ -391,22 +388,97 @@
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
-                    <div class="feed-contents__image js-flickity">
+                    <div class="feed-contents__image">
                         <div class="image-slide__wrap">
                             <img src="./assets/images/feed-image1.jpg">
                         </div>
-                        
+
+                        <!-- <div class="image-slide__wrap">
+                        <img src="./assets/images/feed-image2.jpg">
+                        </div>
+
                         <div class="image-slide__wrap">
+                        <img src="./assets/images/feed-image3.jpg">
+                        </div> -->
+                    </div>
+                    <ul class="actions">
+                        <li class="actions__item">
+                            <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                        </li>
+                        <li class="actions__item">
+                            <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                        </li>
+                        <li class="actions__item">
+                            <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                        </li>
+                    </ul>
+                    <span class="feed-contents__like">
+                        좋아요
+                        <b class="feed-contents__like-count">1,094개</b>
+                    </span>
+                </section>
+                <footer class="feed-comment">
+                    <span class="feed-comment__count">댓글 346개</span>
+                    <div class="feed-comment__recent">
+                        <b>소*</b><p>마우스나 살까?</p>
+                    </div>
+                    <a href="#" class="feed-comment__link">댓글 달기</a>
+                </footer>
+                <ul class="related">
+                    <li class="related__item">
+                        <a href="#">
+                            <img src="" alt="" class="related__item-image">
+                            <div class="related__item-info">
+                                <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                            </div>
+                        </a>
+                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                    </li>
+                    <li class="related__item">
+                        <a href="#">
+                            <img src="" alt="" class="related__item-image">
+                            <div class="related__item-info">
+                                <span>춘식이 무드등</span><b>29,000원</b>
+                            </div>
+                        </a>
+                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                    </li>
+                    <li class="related__item">
+                        <a href="#">
+                            <img src="" alt="" class="related__item-image">
+                            <div class="related__item-info">
+                                <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                            </div>
+                        </a>
+                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                    </li>
+                </ul>
+            </article>
+            <!-- Feed-3 -->
+            <article class="feed">
+                <header class="feed-header">
+                    <a href="#" class="feed-header__image"></a>
+                    <span class="feed-header__name">라이언</span>
+                    <time class="feed-header__date" datetime="2021.09.03">2021.09.03</time>
+                </header>
+                <section class="feed-contents">
+                    <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                    <p class="feed-contents__subcopy">티끌모아 태산💵
+                        춘식이에게 동전을 맡겨주세요.🐱
+                        저금하면 신나는 멜로디까지!🎶
+                    </p>
+                    <div class="feed-contents__image">
+                        <div class="image-slide__wrap fade">
+                            <img src="./assets/images/feed-image1.jpg">
+                        </div>
+                        
+                        <!-- <div class="image-slide__wrap3 fade">
                             <img src="./assets/images/feed-image2.jpg">
                         </div>
                         
-                        <div class="image-slide__wrap">
+                        <div class="image-slide__wrap3 fade">
                             <img src="./assets/images/feed-image3.jpg">
-                        </div>
-                        
-                        <!-- Next and previous buttons -->
-                        <!-- <a class="prev" onclick="plusSlides(-1)"></a>
-                        <a class="next" onclick="plusSlides(1)"></a> -->
+                        </div> -->
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -468,35 +540,116 @@
                     </li>
                 </ul>
             </article>
+            <!-- Feed-4 -->
             <article class="feed">
                 <header class="feed-header">
                     <a href="#" class="feed-header__image"></a>
                     <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime=""></time>
+                    <time class="feed-header__date" datetime="2021.09.03">2021.09.03</time>
                 </header>
                 <section class="feed-contents">
                     <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
-                    <p class="feed-contents__subcopy">
-                        티끌모아 태산💵
+                    <p class="feed-contents__subcopy">티끌모아 태산💵
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
                     <div class="feed-contents__image">
-                        <div class="image-slide__wrap3 fade">
+                        <div class="image-slide__wrap">
                             <img src="./assets/images/feed-image1.jpg">
                         </div>
                         
-                        <div class="image-slide__wrap3 fade">
+                        <!-- <div class="image-slide__wrap">
                             <img src="./assets/images/feed-image2.jpg">
                         </div>
                         
-                        <div class="image-slide__wrap3 fade">
+                        <div class="image-slide__wrap">
                             <img src="./assets/images/feed-image3.jpg">
+                        </div> -->
+                    </div>
+                    <a href="#" class="feed-contents__link">
+                        <div class="feed-contents__link-box">
+                            <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
+                            <span class="feed-contents__link-arrow"></span>
+                        </div>
+                    </a>
+                    <ul class="actions">
+                        <li class="actions__item">
+                            <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                        </li>
+                        <li class="actions__item">
+                            <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                        </li>
+                        <li class="actions__item">
+                            <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                        </li>
+                    </ul>
+                    <span class="feed-contents__like">
+                        좋아요
+                        <b class="feed-contents__like-count">1,094개</b>
+                    </span>
+                </section>
+                <footer class="feed-comment">
+                    <span class="feed-comment__count">댓글 346개</span>
+                    <div class="feed-comment__recent">
+                        <b>소*</b><p>마우스나 살까?</p>
+                    </div>
+                    <a href="#" class="feed-comment__link">댓글 달기</a>
+                </footer>
+                <ul class="related">
+                    <li class="related__item">
+                        <a href="#">
+                            <img src="" alt="" class="related__item-image">
+                            <div class="related__item-info">
+                                <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
+                            </div>
+                        </a>
+                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                    </li>
+                    <li class="related__item">
+                        <a href="#">
+                            <img src="" alt="" class="related__item-image">
+                            <div class="related__item-info">
+                                <span>춘식이 무드등</span><b>29,000원</b>
+                            </div>
+                        </a>
+                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                    </li>
+                    <li class="related__item">
+                        <a href="#">
+                            <img src="" alt="" class="related__item-image">
+                            <div class="related__item-info">
+                                <span>춘식이 말랑쿠션</span><b>29,000원</b>
+                            </div>
+                        </a>
+                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                    </li>
+                </ul>
+            </article>
+            <!-- Feed-5 -->
+            <article class="feed">
+                <header class="feed-header">
+                    <a href="#" class="feed-header__image"></a>
+                    <span class="feed-header__name">라이언</span>
+                    <time class="feed-header__date" datetime="2021.09.03">2021.09.03</time>
+                </header>
+                <section class="feed-contents">
+                    <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
+                    <p class="feed-contents__subcopy">티끌모아 태산💵
+                        춘식이에게 동전을 맡겨주세요.🐱
+                        저금하면 신나는 멜로디까지!🎶
+                    </p>
+                    <div class="feed-contents__image">
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image1.jpg">
                         </div>
                         
-                        <!-- Next and previous buttons -->
-                        <a class="prev" onclick="plusSlides(-1)"></a>
-                        <a class="next" onclick="plusSlides(1)"></a>
+                        <!-- <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image2.jpg">
+                        </div>
+                        
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image3.jpg">
+                        </div> -->
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -517,90 +670,13 @@
                     </ul>
                     <span class="feed-contents__like">
                         좋아요
-                        <b class="feed-contents__like-count">1,094</b>
-                        개
+                        <b class="feed-contents__like-count">1,094개</b>
                     </span>
                 </section>
                 <footer class="feed-comment">
                     <span class="feed-comment__count">댓글 346개</span>
-                    <div class="feed-comment__recent"><b>소*</b>
-                        <p>마우스나 살까?</p>
-                    </div>
-                    <a href="#" class="feed-comment__link">댓글 달기</a>
-                </footer>
-
-                <ul class="related">
-                    <li class="related__item">
-                        <a href="#">
-                            <img src="" alt="" class="related__item-image">
-                            <div class="related__item-info">
-                                <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
-                            </div>
-                        </a>
-                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
-                    </li>
-                    <li class="related__item">
-                        <a href="#">
-                            <img src="" alt="" class="related__item-image">
-                            <div class="related__item-info">
-                                <span>춘식이 무드등</span><b>29,000원</b>
-                            </div>
-                        </a>
-                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
-                    </li>
-                    <li class="related__item">
-                        <a href="#">
-                            <img src="" alt="" class="related__item-image">
-                            <div class="related__item-info">
-                                <span>춘식이 말랑쿠션</span><b>29,000원</b>
-                            </div>
-                        </a>
-                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
-                    </li>
-                </ul>
-            </article>
-            <article class="feed">
-                <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
-                    <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime=""></time>
-                </header>
-                <section class="feed-contents">
-                    <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
-                    <p class="feed-contents__subcopy">
-                        티끌모아 태산💵
-                        춘식이에게 동전을 맡겨주세요.🐱
-                        저금하면 신나는 멜로디까지!🎶
-                    </p>
-                    <div class="feed-contents__image">
-                    </div>
-                    <a href="#" class="feed-contents__link">
-                        <div class="feed-contents__link-box">
-                            <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
-                            <span class="feed-contents__link-arrow"></span>
-                        </div>
-                    </a>
-                    <ul class="actions">
-                        <li class="actions__item">
-                            <button class="actions__button-like" type="button" aria-label="좋아요"></button>
-                        </li>
-                        <li class="actions__item">
-                            <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
-                        </li>
-                        <li class="actions__item">
-                            <button class="actions__button-share" type="button" aria-label="공유하기"></button>
-                        </li>
-                    </ul>
-                    <span class="feed-contents__like">
-                        좋아요
-                        <b class="feed-contents__like-count">1,094</b>
-                        개
-                    </span>
-                </section>
-                <footer class="feed-comment">
-                    <span class="feed-comment__count">댓글 346개</span>
-                    <div class="feed-comment__recent"><b>소*</b>
-                        <p>마우스나 살까?</p>
+                    <div class="feed-comment__recent">
+                        <b>소*</b><p>마우스나 살까?</p>
                     </div>
                     <a href="#" class="feed-comment__link">댓글 달기</a>
                 </footer>
@@ -634,27 +710,36 @@
                     </li>
                 </ul>
             </article>
+            <!-- Feed-6 -->
             <article class="feed">
                 <header class="feed-header">
                     <a href="#" class="feed-header__image"></a>
                     <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime=""></time>
+                    <time class="feed-header__date" datetime="2021.09.03">2021.09.03</time>
                 </header>
                 <section class="feed-contents">
                     <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
-                    <p class="feed-contents__subcopy">
-                        티끌모아 태산💵
+                    <p class="feed-contents__subcopy">티끌모아 태산💵
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
                     <div class="feed-contents__image">
-
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image1.jpg">
+                        </div>
+                        
+                        <!-- <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image2.jpg">
+                        </div>
+                        
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image3.jpg">
+                        </div> -->
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
                             <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
                             <span class="feed-contents__link-arrow"></span>
-                        <!-- 끝 -->
                         </div>
                     </a>
                     <ul class="actions">
@@ -670,14 +755,13 @@
                     </ul>
                     <span class="feed-contents__like">
                         좋아요
-                        <b class="feed-contents__like-count">1,094</b>
-                        개
+                        <b class="feed-contents__like-count">1,094개</b>  
                     </span>
                 </section>
                 <footer class="feed-comment">
                     <span class="feed-comment__count">댓글 346개</span>
-                    <div class="feed-comment__recent"><b>소*</b>
-                        <p>마우스나 살까?</p>
+                    <div class="feed-comment__recent">
+                        <b>소*</b><p>마우스나 살까?</p>
                     </div>
                     <a href="#" class="feed-comment__link">댓글 달기</a>
                 </footer>
@@ -711,20 +795,31 @@
                     </li>
                 </ul>
             </article>
+            <!-- Feed-7 -->
             <article class="feed">
                 <header class="feed-header">
                     <a href="#" class="feed-header__image"></a>
                     <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime=""></time>
+                    <time class="feed-header__date" datetime="2021.09.03">2021.09.03</time>
                 </header>
                 <section class="feed-contents">
                     <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
-                    <p class="feed-contents__subcopy">
-                        티끌모아 태산💵
+                    <p class="feed-contents__subcopy">티끌모아 태산💵
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
                     <div class="feed-contents__image">
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image1.jpg">
+                        </div>
+                        
+                        <!-- <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image2.jpg">
+                        </div>
+                        
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image3.jpg">
+                        </div> -->
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -745,14 +840,13 @@
                     </ul>
                     <span class="feed-contents__like">
                         좋아요
-                        <b class="feed-contents__like-count">1,094</b>
-                        개
+                        <b class="feed-contents__like-count">1,094개</b>
                     </span>
                 </section>
                 <footer class="feed-comment">
                     <span class="feed-comment__count">댓글 346개</span>
-                    <div class="feed-comment__recent"><b>소*</b>
-                        <p>마우스나 살까?</p>
+                    <div class="feed-comment__recent">
+                        <b>소*</b><p>마우스나 살까?</p>
                     </div>
                     <a href="#" class="feed-comment__link">댓글 달기</a>
                 </footer>
@@ -786,20 +880,31 @@
                     </li>
                 </ul>
             </article>
+            <!-- Feed-8 -->
             <article class="feed">
                 <header class="feed-header">
                     <a href="#" class="feed-header__image"></a>
                     <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime=""></time>
+                    <time class="feed-header__date" datetime="2021.09.03">2021.09.03</time>
                 </header>
                 <section class="feed-contents">
                     <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
-                    <p class="feed-contents__subcopy">
-                        티끌모아 태산💵
+                    <p class="feed-contents__subcopy">티끌모아 태산💵
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
                     <div class="feed-contents__image">
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image1.jpg">
+                        </div>
+                        
+                        <!-- <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image2.jpg">
+                        </div>
+                        
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image3.jpg">
+                        </div> -->
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -820,14 +925,13 @@
                     </ul>
                     <span class="feed-contents__like">
                         좋아요
-                        <b class="feed-contents__like-count">1,094</b>
-                        개
+                        <b class="feed-contents__like-count">1,094개</b>
                     </span>
                 </section>
                 <footer class="feed-comment">
                     <span class="feed-comment__count">댓글 346개</span>
-                    <div class="feed-comment__recent"><b>소*</b>
-                        <p>마우스나 살까?</p>
+                    <div class="feed-comment__recent">
+                        <b>소*</b><p>마우스나 살까?</p>
                     </div>
                     <a href="#" class="feed-comment__link">댓글 달기</a>
                 </footer>
@@ -861,20 +965,31 @@
                     </li>
                 </ul>
             </article>
+            <!-- Feed-9 -->
             <article class="feed">
                 <header class="feed-header">
                     <a href="#" class="feed-header__image"></a>
                     <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime=""></time>
+                    <time class="feed-header__date" datetime="2021.09.03">2021.09.03</time>
                 </header>
                 <section class="feed-contents">
                     <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
-                    <p class="feed-contents__subcopy">
-                        티끌모아 태산💵
+                    <p class="feed-contents__subcopy">티끌모아 태산💵
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
                     <div class="feed-contents__image">
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image1.jpg">
+                        </div>
+                        
+                        <!-- <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image2.jpg">
+                        </div>
+                        
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image3.jpg">
+                        </div> -->
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -895,14 +1010,13 @@
                     </ul>
                     <span class="feed-contents__like">
                         좋아요
-                        <b class="feed-contents__like-count">1,094</b>
-                        개
+                        <b class="feed-contents__like-count">1,094개</b>
                     </span>
                 </section>
                 <footer class="feed-comment">
                     <span class="feed-comment__count">댓글 346개</span>
-                    <div class="feed-comment__recent"><b>소*</b>
-                        <p>마우스나 살까?</p>
+                    <div class="feed-comment__recent">
+                        <b>소*</b><p>마우스나 살까?</p>
                     </div>
                     <a href="#" class="feed-comment__link">댓글 달기</a>
                 </footer>
@@ -936,20 +1050,31 @@
                     </li>
                 </ul>
             </article>
+            <!-- Feed-10 -->
             <article class="feed">
                 <header class="feed-header">
                     <a href="#" class="feed-header__image"></a>
                     <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime=""></time>
+                    <time class="feed-header__date" datetime="2021.09.03">2021.09.03</time>
                 </header>
                 <section class="feed-contents">
                     <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
-                    <p class="feed-contents__subcopy">
-                        티끌모아 태산💵
+                    <p class="feed-contents__subcopy">티끌모아 태산💵
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
                     <div class="feed-contents__image">
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image1.jpg">
+                        </div>
+                        
+                        <!-- <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image2.jpg">
+                        </div>
+                        
+                        <div class="image-slide__wrap">
+                            <img src="./assets/images/feed-image3.jpg">
+                        </div> -->
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -970,90 +1095,13 @@
                     </ul>
                     <span class="feed-contents__like">
                         좋아요
-                        <b class="feed-contents__like-count">1,094</b>
-                        개
+                        <b class="feed-contents__like-count">1,094개</b>
                     </span>
                 </section>
                 <footer class="feed-comment">
                     <span class="feed-comment__count">댓글 346개</span>
-                    <div class="feed-comment__recent"><b>소*</b>
-                        <p>마우스나 살까?</p>
-                    </div>
-                    <a href="#" class="feed-comment__link">댓글 달기</a>
-                </footer>
-                <ul class="related">
-                    <li class="related__item">
-                        <a href="#">
-                            <img src="" alt="" class="related__item-image">
-                            <div class="related__item-info">
-                                <span>라이언과 춘식이의 집 브릭 피규어</span><b>39,000원</b>
-                            </div>
-                        </a>
-                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
-                    </li>
-                    <li class="related__item">
-                        <a href="#">
-                            <img src="" alt="" class="related__item-image">
-                            <div class="related__item-info">
-                                <span>춘식이 무드등</span><b>29,000원</b>
-                            </div>
-                        </a>
-                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
-                    </li>
-                    <li class="related__item">
-                        <a href="#">
-                            <img src="" alt="" class="related__item-image">
-                            <div class="related__item-info">
-                                <span>춘식이 말랑쿠션</span><b>29,000원</b>
-                            </div>
-                        </a>
-                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
-                    </li>
-                </ul>
-            </article>
-            <article class="feed">
-                <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
-                    <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime=""></time>
-                </header>
-                <section class="feed-contents">
-                    <h2 class="feed-contents__title">춘식이가 동전을 냠💰</h2>
-                    <p class="feed-contents__subcopy">
-                        티끌모아 태산💵
-                        춘식이에게 동전을 맡겨주세요.🐱
-                        저금하면 신나는 멜로디까지!🎶
-                    </p>
-                    <div class="feed-contents__image">
-
-                    </div>
-                    <a href="#" class="feed-contents__link">
-                        <div class="feed-contents__link-box">
-                            <span class="feed-contents__link-text">춘식이 무빙 저금통 보러 가기</span>
-                            <span class="feed-contents__link-arrow"></span>
-                        </div>
-                    </a>
-                    <ul class="actions">
-                        <li class="actions__item">
-                            <button class="actions__button-like" type="button" aria-label="좋아요"></button>
-                        </li>
-                        <li class="actions__item">
-                            <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
-                        </li>
-                        <li class="actions__item">
-                            <button class="actions__button-share" type="button" aria-label="공유하기"></button>
-                        </li>
-                    </ul>
-                    <span class="feed-contents__like">
-                        좋아요
-                        <b class="feed-contents__like-count">1,094</b>
-                        개
-                    </span>
-                </section>
-                <footer class="feed-comment">
-                    <span class="feed-comment__count">댓글 346개</span>
-                    <div class="feed-comment__recent"><b>소*</b>
-                        <p>마우스나 살까?</p>
+                    <div class="feed-comment__recent">
+                        <b>소*</b><p>마우스나 살까?</p>
                     </div>
                     <a href="#" class="feed-comment__link">댓글 달기</a>
                 </footer>
@@ -1129,36 +1177,6 @@
                 <img src="./assets/images/footer-badge.png" alt="가족친화 우수기업">
             </div>
         </footer>
-<!-- <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-    showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("image-slide__wrap");
-    // var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    // for (i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(" active", "");
-    // }
-    slides[slideIndex-1].style.display = "block";
-    // dots[slideIndex-1].className += " active";
-    }
-</script> -->
 </body>
 
 </html>

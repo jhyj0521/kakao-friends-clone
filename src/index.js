@@ -1,6 +1,27 @@
 import './sass/index.scss';
-require('flickity');
-// import './slider.js';
+// import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+
+// var swiper = new Swiper(".mySwiper", {
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     keyboard: {
+//       enabled: true
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true
+//     },
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev"
+//     }
+//   });
+// require('flickity');
+// require('flickity-imagesloaded');
+// require('flickity-fullscreen');
 
 
 // 헤더 버튼
