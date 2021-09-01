@@ -100,9 +100,9 @@ media.addListener((e) => {
     //데스크탑
     else{
         if(!adBanner.classList.contains('ad-banner--active')){
-            headerWrap.setAttribute('style', 'transform:translateY(-65px)');
+            // headerWrap.setAttribute('style', 'transform:translateY(-65px)');
         }else{
-            adBanner.setAttribute('style','transform:translateY(-155px)');
+            // adBanner.setAttribute('style','transform:translateY(-155px)');
         }
     }
 });

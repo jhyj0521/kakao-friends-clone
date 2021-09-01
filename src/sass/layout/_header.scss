@@ -41,10 +41,18 @@
 
 .utility {
     @include flexbox;
+    @include desktop{
+        position: absolute;
+        right: rem(51px);
+    }
+
+    &__item-search{
+        order: -1;
+    }
 
     &__button-global svg{
-        width: 19px;
-        height: 19px;
+        width: rem(19px);
+        height: rem(19px);
     }
 
     &__button-search {
@@ -66,14 +74,12 @@
         top: 0;
         left: 0;
         width: 80vw;
-        height: 100vh;
+        height: 100%;
         padding: 0 rem(30px);
         background-color: $white;
         overflow: auto;
-    }
 
-    @include mobile {
-        @at-root &--active {
+        &--active {
             display: block;
             z-index: 1;
         }
@@ -95,11 +101,12 @@
         background-color: $yellow;
         text-align: center;
         display: none;
+        position: absolute;
+        top: 0;
     }
 
     &--active {
         display: block;
-        transform: translateY(-155px);
     }
 
     &__button-close {
@@ -199,8 +206,9 @@
 
         @include desktop {
             position: absolute;
-            top: 0;
             right: 0;
+            // margin-right: -40px;
+            // margin-top: -87px;
         }
     }
 
@@ -381,19 +389,16 @@
         background-color: $white;
         z-index: 1;
         // display: none;
-        transform: translateY(-115vw);
         transition: 400ms;
-    
-        &--active {
-            transform: none;
-            // display: block;
-        }
+        width: 100vw;
     
         @include mobile {
-            width: 100vw;
             position: fixed;
             top: 0;
             left: 0;
+            height: 100%;
+            overflow: auto;
+            transform: translateX(150vw);
         }
     
         @include desktop {
@@ -401,8 +406,13 @@
             padding: rem(40px) 0 rem(35px) 0;
             position: absolute;
             @include boxSizeMax();
-            width: 100vw;
-            left: 0;
+            margin-top: 8px;
+            transform: translateY(-115vw);
+        }
+
+        &--active {
+            transform: none;
+            // display: block;
         }
     }
 
