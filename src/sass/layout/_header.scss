@@ -2,6 +2,7 @@
 
 // header
 .header {
+    position: relative;
     @include boxSizeMax();
     min-width: 394px;
 
@@ -41,9 +42,19 @@
 .utility {
     @include flexbox;
 
-    &__button-global svg, &__button-search svg {
+    &__button-global svg{
         width: 19px;
         height: 19px;
+    }
+
+    &__button-search {
+        display: block;
+        width: rem(19px);
+        height: rem(19px);
+        border: 0;
+        background-color: transparent;
+        background-image: url(./../assets/images/search_button.svg);
+        background-repeat: no-repeat;
     }
 }
 
@@ -196,7 +207,6 @@
     &__item {
         @include desktop {
             width: rem(60px);
-            position: relative;
         }
     }
 }
@@ -362,31 +372,39 @@
 }
 
 // search
-.search-wrap {
-    background-color: $white;
-    display: none;
-    z-index: 1;
-
-    &--active {
-        display: block;
-    }
-
-    @include mobile {
-        width: 100vw;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    @include desktop {
-        background-color: $yellow;
-        padding: rem(40px) 0 rem(35px) 0;
-        position: absolute;
-    }
-}
-
 //검색폼 모바일 기준
 .search {
+    @include boxSizeMax(rem(654px));
+    margin: 0 auto;
+
+    &-wrap {
+        background-color: $white;
+        z-index: 1;
+        // display: none;
+        transform: translateY(-115vw);
+        transition: 400ms;
+    
+        &--active {
+            transform: none;
+            // display: block;
+        }
+    
+        @include mobile {
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    
+        @include desktop {
+            background-color: $yellow;
+            padding: rem(40px) 0 rem(35px) 0;
+            position: absolute;
+            @include boxSizeMax();
+            width: 100vw;
+            left: 0;
+        }
+    }
 
     //검색 폼
     &__form {
@@ -410,14 +428,13 @@
         // }
     }
 
-
     //검색 - 버튼 리스트
     &__button {
         height: 100%;
 
         //검색 버튼
         &-submit {
-            background-image: url(/src/assets/images/search_button.svg);
+            background-image: url(./../assets/images/search_button.svg);
             background-repeat: no-repeat;
             background-color: transparent;
             border: none;
@@ -446,9 +463,9 @@
 
         @include desktop {
             font-size: rem(15px);
+            text-align: left;
         }
     }
-
 
     //검색 - 캐릭터 리스트
     &-character {
@@ -462,27 +479,6 @@
             margin: 0 rem(3px);
         }
 
-        //검색 - 카테고리 리스트
-        &-category {
-            @include flexbox(row, $flex-wrap: wrap);
-            padding: rem(12px) rem(20px);
-
-            &__item {
-                border: 1px solid $category-border-color;
-                border-radius: rem(51px);
-                padding: 6px 13px;
-                background-color: $white;
-                margin: 0 7px 9px 0;
-            }
-
-            &__link {
-                height: 15px;
-                line-height: 1;
-                font-size: rem(14px);
-                white-space: nowrap;
-            }
-        }
-
         // 검색 - 캐릭터, 카테고리 구분선
         &__devide-line {
             height: 1px;
@@ -491,11 +487,26 @@
             background-color: $gray5;
             margin: rem(24px) rem(20px);
         }
+    }
 
-        // 데스크탑 기준 max-width 지정
-        @include desktop {
-            @include boxSizeMax(rem(654px));
-            background-color: $yellow;
+    //검색 - 카테고리 리스트
+    &-category {
+        @include flexbox(row, $flex-wrap: wrap);
+        padding: rem(12px) rem(20px);
+
+        &__item {
+            border: 1px solid $category-border-color;
+            border-radius: rem(51px);
+            padding: 6px 13px;
+            background-color: $white;
+            margin: 0 7px 9px 0;
+        }
+
+        &__link {
+            height: 15px;
+            line-height: 1;
+            font-size: rem(14px);
+            white-space: nowrap;
         }
     }
 }
@@ -511,7 +522,7 @@
         width: rem(75px);
         height: rem(75px);
         background-size: auto 100%;
-        background-image: url(/src/assets/images/kakao.svg);
+        background-image: url(./../assets/images/kakao.svg);
         background-repeat: no-repeat;
     }
 
