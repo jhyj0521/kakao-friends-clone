@@ -9,3 +9,19 @@
     margin: 0 auto;
     @include flexbox(row, $flex-wrap: wrap);
 }
+
+.button-top {
+    display: block;
+    position: fixed;
+    right: 13px;
+    bottom: 13px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid $gray9;
+    border-radius: 50%;
+    background-image: url(../assets/images/ico_top.png);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 17px 20px;
+    background-position: 12px;
+}
