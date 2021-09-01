@@ -6,8 +6,20 @@
 }
 
 .main-content__today {
-    margin: 0 auto;
-    @include flexbox(row, $flex-wrap: wrap);
+    @include desktop {
+        padding: 0 2%;
+    }
+}
+
+
+.gutter-sizer {
+    @include desktop {
+        width: 4%;
+    }
+
+    @include desktopL {
+        width: 3%;
+    }
 }
 
 .button-top {

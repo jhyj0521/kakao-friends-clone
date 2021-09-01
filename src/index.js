@@ -107,3 +107,56 @@ media.addListener((e) => {
     }
 });
 
+
+// 피드 정렬
+let masonryOptions = {
+    // options...
+    itemSelector: '.feed',
+    columnWidth: '.feed',
+    gutter: '.gutter-sizer',
+    transitionDuration: '0s',
+    stagger: '0s',
+    percentPosition: true,
+}
+
+function create() {
+    const masonry = new Masonry('.main-content__today', masonryOptions);
+    return masonry;
+}
+
+const desktopL = matchMedia("(min-width: 1200px)");
+let msnryL;
+desktopL.addEventListener(('change'), () => { 
+    if(desktopL.matches) {
+        if(!!msnry) {
+            msnry.destroy();
+            console.log(msnry);
+        }
+        msnryL = create();
+    } else {
+        msnryL.destroy();
+        msnry = create();
+        console.log(msnryL);
+    }
+})
+
+const desktop = matchMedia("(min-width: 768px)");
+let msnry;
+desktop.addEventListener(('change'), () => { 
+    if(desktop.matches) {
+        msnry = create();
+    } else {
+        msnry.destroy();
+        console.log(msnryL);
+    }
+})
+
+function init() {
+    if(desktop.matches) {
+        msnry = create();
+    }
+    if(desktop.matches) {
+        msnryL = create();
+    }
+}
+init();
