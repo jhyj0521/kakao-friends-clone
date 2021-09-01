@@ -2,7 +2,8 @@
 
 // header
 .header {
-    background-color: skyblue;
+    @include boxSizeMax();
+    min-width: 394px;
 
     &-wrap {
         background-color: pink;
