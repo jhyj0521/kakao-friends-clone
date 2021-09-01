@@ -1,0 +1,31 @@
+@use '../utils' as *;
+
+.main-tap {
+
+    &__list {
+        @include flexbox(row, center, center);
+        padding: 0px 17.5px;
+        border-bottom: 1px solid $gray10;
+    }
+
+    &__item {
+        display: block;
+        @include autoMargin();
+    }
+    
+    &__item:first-child:after {
+        content: '';
+        display: block;
+        border-bottom: 2.5px solid #000;
+    }
+
+    button {
+        display: block;
+        border: none;
+        background: #fff;
+        padding: 11px 60px;
+        white-space: nowrap;
+    }
+
+
+}
