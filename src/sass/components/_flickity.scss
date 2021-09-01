@@ -1,6 +1,7 @@
 /*! Flickity v2.2.2
 https://flickity.metafizzy.co
 ---------------------------------------------- */
+@use '../utils' as *;
 
 .flickity-enabled {
     position: relative;
@@ -13,7 +14,7 @@ https://flickity.metafizzy.co
 .flickity-viewport {
     overflow: hidden;
     position: relative;
-    height: 50%;
+    height: 100%;
 }
 
 .flickity-slider {

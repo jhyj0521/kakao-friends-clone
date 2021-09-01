@@ -56,9 +56,14 @@
         }
 
         &__image {
-            
             div {
-                border-radius: 10px;
+                
+                img {
+                    display: block;
+                    width: 100%;
+                    border-radius: 10px;
+                    // height: 400px;
+                }
             }
         }
 
@@ -92,7 +97,7 @@
 
         .actions {
             margin-top: rem(10px);
-
+            
             &__item {
                 float: left;
             }
@@ -177,7 +182,7 @@
             background-color: $gray7;
             border-radius: 0px 24px 24px;
             font-size: rem(14px);
-            color: $black2;
+            color: $gray6;
         }
     }
 
@@ -236,99 +241,6 @@
     @include desktop {
         box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.25);
         border-radius: 25px;
+        max-width: 394px;
     }
 }
-
-// 이미지 삽입 및 슬라이더
-// .feed-contents__image {
-//     max-width: rem(600px);
-//     position: relative;
-//     margin: auto;
-
-// }
-
-// .image-slide__wrap {
-//     display: none;
-
-// }
-
-// .prev {
-//     cursor: pointer;
-//     position: absolute;
-//     top: rem(186px);
-//     left: rem(16px);
-//     width: rem(27px);
-//     height: rem(27px);
-//     // color: white;
-//     // font-weight: bold;
-//     // font-size: 18px;
-//     // transition: 0.6s ease;
-//     // border-radius: 0 3px 3px 0;
-//     // user-select: none;
-//     background-image: url(../assets/images/arrow-medium-circle-left-white.png);
-//     background-repeat: no-repeat;
-//     background-size: contain;
-// }
-
-// /* Position the "next button" to the right */
-// .next {
-//     cursor: pointer;
-//     position: absolute;
-//     top: rem(186px);
-//     right: rem(16px);
-//     width: rem(27px);
-//     height: rem(27px);
-//     // color: white;
-//     // font-weight: bold;
-//     // font-size: 18px;
-//     // transition: 0.6s ease;
-//     // border-radius: 0 3px 3px 0;
-//     // user-select: none;
-//     background-image: url(../assets/images/arrow-medium-circle-right-white.png);
-//     background-repeat: no-repeat;
-//     background-size: contain;
-// }
-
-// /* On hover, add a black background color with a little bit see-through */
-// // .prev:hover,
-// // .next:hover {
-// //     background-color: rgba(0, 0, 0, 0.8);
-// // }
-
-// /* Fading animation */
-// .fade {
-//     -webkit-animation-name: fade;
-//     -webkit-animation-duration: 1.5s;
-//     animation-name: fade;
-//     animation-duration: 1.5s;
-// }
-
-// @-webkit-keyframes fade {
-//     from {
-//         opacity: .4
-//     }
-
-//     to {
-//         opacity: 1
-//     }
-// }
-
-// @keyframes fade {
-//     from {
-//         opacity: .4
-//     }
-
-//     to {
-//         opacity: 1
-//     }
-// }
-
-/* On smaller screens, decrease text size */
-// @media only screen and (max-width: 300px) {
-
-//     .prev,
-//     .next,
-//     .text {
-//         font-size: rem(11px)
-//     }
-// }
