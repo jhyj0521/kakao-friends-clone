@@ -18,6 +18,10 @@ const buttonBannerClose = document.querySelector('.ad-banner__button-close');
 const adBanner = document.querySelector('.ad-banner');
 const headerWrap = document.querySelector('.header-wrap');
 const media = matchMedia("screen and (min-width: 768px)"); 
+const buttonMember = document.querySelector('.button-member');
+const menuMember = document.querySelector('.menu-member');
+const buttonOther = document.querySelector('.button-other');
+const menuOther = document.querySelector('.menu-other');
 
 // 네비게이션 열기 버튼 클릭 시 전체 메뉴 열림
 menuOpenBtn.addEventListener('click', () => {
@@ -31,12 +35,12 @@ menuCloseBtn.addEventListener('click', () => {
 
 // 캐릭터 버튼 클릭시 리스트 토글
 buttonCharacter.addEventListener('click', () => {
-    menuCharacter.classList.toggle('menu-character');
+    menuCharacter.classList.toggle('menu-character--active');
 })
 
 // 카테고리 버튼 클릭시 리스트 토글
 buttonCategory.addEventListener('click', () => {
-    menuCategory.classList.toggle('menu-category');
+    menuCategory.classList.toggle('menu-category--active');
 })
 
 buttonSearch.addEventListener('click', () => {
@@ -54,6 +58,17 @@ buttonBannerClose.addEventListener('click', () => {
     adBanner.classList.remove('ad-banner--active');
     headerWrap.setAttribute('style', 'transform:translateY(-65px)');
 });
+
+//멤버 메뉴 버튼
+buttonMember.addEventListener('click', () => {
+    menuMember.classList.toggle('menu-member--active');
+});
+
+//기타 메뉴 버트
+buttonOther.addEventListener('click', () => {
+    menuOther.classList.toggle('menu-other--active');
+});
+
 
 media.addListener((e) => {
     //모바일
