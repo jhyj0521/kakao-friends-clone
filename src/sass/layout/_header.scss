@@ -391,28 +391,38 @@
         // display: none;
         transition: 400ms;
         width: 100vw;
+        height: 0;
+        overflow: hidden;
     
         @include mobile {
             position: fixed;
             top: 0;
             left: 0;
-            height: 100%;
-            overflow: auto;
-            transform: translateX(150vw);
+            // height: 100%;
+            // transform: translateX(150vw);
         }
     
         @include desktop {
             background-color: $yellow;
-            padding: rem(40px) 0 rem(35px) 0;
             position: absolute;
             @include boxSizeMax();
             margin-top: 8px;
-            transform: translateY(-115vw);
+            // transform: translateY(-115vw);
         }
 
         &--active {
             transform: none;
+            height: 717px;
             // display: block;
+
+            @include mobile{
+                height: 100%;
+                overflow: auto;
+            }
+
+            @include desktop{
+                padding: rem(40px) 0 rem(35px) 0;
+            }
         }
     }
 
