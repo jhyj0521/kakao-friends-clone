@@ -1,6 +1,5 @@
 import './sass/index.scss';
 import './btn-top.js';
-import './btn-more.js';
 // import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 // import 'swiper/css';
 // import 'swiper/css/navigation';
