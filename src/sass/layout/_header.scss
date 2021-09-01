@@ -1,15 +1,18 @@
 @use './../utils' as *;
+
 // header
 .header {
     background-color: skyblue;
 
     &-wrap {
         background-color: pink;
-        @include mobile{
+
+        @include mobile {
             @include flexbox(row, space-between);
             padding-top: 2.93333vw;
         }
-        @include desktop{
+
+        @include desktop {
             padding-top: rem(100px);
             text-align: center;
             transition: 400ms;
@@ -60,6 +63,7 @@
     @include mobile {
         @at-root &--active {
             display: block;
+            z-index: 1;
         }
     }
 }
@@ -73,7 +77,7 @@
         z-index: 2;
     }
 
-    @include desktop{
+    @include desktop {
         @include boxSizeFull();
         height: 55px;
         background-color: $yellow;
@@ -81,7 +85,7 @@
         display: none;
     }
 
-    &--active{
+    &--active {
         display: block;
         transform: translateY(-155px);
     }
@@ -90,15 +94,16 @@
         @include mobile {
             display: none;
         }
-        @include desktop{
+
+        @include desktop {
             position: absolute;
             top: rem(15px);
             right: 0;
         }
     }
 
-    &__link{
-        @include desktop{
+    &__link {
+        @include desktop {
             display: block;
             width: 100%;
             height: 100%;
@@ -111,7 +116,7 @@
             max-width: 94%;
         }
 
-        @include desktop{
+        @include desktop {
             height: 100%;
         }
     }
@@ -121,6 +126,16 @@
 .button-member {
     @include mobile {
         display: none;
+    }
+
+    @include desktop {
+        display: block;
+        width: rem(19px);
+        height: rem(19px);
+        border: 0;
+        background-color: transparent;
+        background-image: url(./../assets/images/user-menu.svg);
+        background-repeat: no-repeat;
     }
 }
 
@@ -147,14 +162,41 @@
         top: 0;
         right: 0;
     }
+
+    @include desktop {
+        display: none;
+    }
 }
 
 // 메뉴 멤버
 .menu {
-    font-size: rem(20px);
+
+    @include mobile {
+        font-size: rem(20px);
+    }
+
+    @include desktop {
+        font-size: rem(16px);
+        display: inline-flex;
+    }
 
     .member {
-        margin-top: rem(50px);
+        @include mobile {
+            margin-top: rem(50px);
+        }
+
+        @include desktop {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &__item {
+        @include desktop {
+            width: rem(60px);
+            position: relative;
+        }
     }
 }
 
@@ -190,6 +232,15 @@
             border-bottom: 1px solid $gray2;
         }
     }
+
+    @include desktop {
+        display: none;
+        white-space: nowrap;
+
+        &--active {
+            display: block;
+        }
+    }
 }
 
 .menu .character {
@@ -199,14 +250,29 @@
 }
 
 .menu-character {
+    display: none;
+
     @include mobile {
         background-color: skyblue;
-        display: none;
-
-        &--active {
-            display: block;
-        }
     }
+
+    @include desktop {
+        @include boxSizeMax();
+        width: 100vw;
+        background-color: $yellow;
+        margin-top: 64px;
+        padding: rem(8px) 0;
+    }
+
+    &--active {
+        display: block;
+        @include flexbox($flex-wrap:wrap);
+    }
+
+    &__item {
+        margin: 10px;
+    }
+
 }
 
 .menu .category:after {
@@ -219,67 +285,102 @@
 }
 
 .menu-category {
+    display: none;
+
     @include mobile {
         background-color: pink;
-        display: none;
+    }
 
+    @include desktop {
         &--active {
-            display: block;
+            @include flexbox();
+            @include boxSizeMax();
+            width: 100vw;
+            margin-top: 63px;
+            margin-left: -63px;
+            padding: 15px 0 15px 63px;
+            white-space: nowrap;
+            background-color: $yellow;
         }
     }
 }
 
 .menu-other {
-    &__link {
-        display: inline-block;
-        width: 100%;
-        padding: rem(25px) 0;
+    @include mobile {
+        &__link {
+            display: inline-block;
+            width: 100%;
+            padding: rem(25px) 0;
+        }
+
+        &__item.notice {
+            padding-top: rem(20px);
+        }
+
+        &__item.center:after {
+            content: "";
+            display: block;
+            padding-top: rem(20px);
+            border-bottom: 1px solid $gray2;
+        }
+
+        &__item.giftcard {
+            padding-top: rem(20px);
+        }
+
+        &__item.giftcard:after {
+            content: "";
+            display: block;
+            padding-top: rem(20px);
+            border-bottom: 1px solid $gray2;
+        }
+
+        &__item.brand-story {
+            padding-top: rem(20px);
+        }
+
+        &__item.store-inform {
+            margin-bottom: rem(60px);
+        }
     }
 
-    &__item.notice {
-        padding-top: rem(20px);
-    }
+    @include desktop {
+        display: none;
 
-    &__item.center:after {
-        content: "";
-        display: block;
-        padding-top: rem(20px);
-        border-bottom: 1px solid $gray2;
-    }
-
-    &__item.giftcard {
-        padding-top: rem(20px);
-    }
-
-    &__item.giftcard:after {
-        content: "";
-        display: block;
-        padding-top: rem(20px);
-        border-bottom: 1px solid $gray2;
-    }
-
-    &__item.brand-story {
-        padding-top: rem(20px);
-    }
-
-    &__item.store-inform {
-        margin-bottom: rem(60px);
+        &--active {
+            @include flexbox();
+            @include boxSizeMax();
+            width: 100vw;
+            margin-top: 63px;
+            margin-left: -120px;
+            padding: 15px 0 15px 120px;
+            white-space: nowrap;
+            background-color: $yellow;
+        }
     }
 }
 
 // search
 .search-wrap {
     background-color: $white;
-
     display: none;
+    z-index: 1;
 
     &--active {
         display: block;
     }
 
+    @include mobile {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
     @include desktop {
         background-color: $yellow;
         padding: rem(40px) 0 rem(35px) 0;
+        position: absolute;
     }
 }
 
@@ -358,124 +459,248 @@
             width: rem(80px);
             padding: rem(10px) 0;
             margin: 0 rem(3px);
+        }
 
-            //캐릭터 사진
-            @at-root .search-character__link {
-                display: block;
-                padding-top: rem(70px);
-                width: rem(75px);
-                height: rem(75px);
-                background-size: auto 100%;
-                background-image: url(/src/assets/images/kakao.svg);
-                background-repeat: no-repeat;
-                margin-bottom: rem(22px);
+        //검색 - 카테고리 리스트
+        &-category {
+            @include flexbox(row, $flex-wrap: wrap);
+            padding: rem(12px) rem(20px);
+
+            &__item {
+                border: 1px solid $category-border-color;
+                border-radius: rem(51px);
+                padding: 6px 13px;
+                background-color: $white;
+                margin: 0 7px 9px 0;
             }
 
-            //캐릭터 이름
-            span {
-                display: block;
-                text-align: center;
+            &__link {
+                height: 15px;
+                line-height: 1;
+                font-size: rem(14px);
                 white-space: nowrap;
-                padding-top: rem(22px);
-                font-size: rem(12px);
-
-                @include desktop {
-                    font-size: rem(14px);
-                }
             }
         }
 
-        //캐릭터 스프라이트
-        .apeach {
+        // 검색 - 캐릭터, 카테고리 구분선
+        &__devide-line {
+            height: 1px;
+            display: block;
+            border: none;
+            background-color: $gray5;
+            margin: rem(24px) rem(20px);
+        }
+
+        // 데스크탑 기준 max-width 지정
+        @include desktop {
+            @include boxSizeMax(rem(654px));
+            background-color: $yellow;
+        }
+    }
+}
+
+
+[class*=-character__item] {
+
+    //캐릭터 사진
+    [class*=-character__link]::before {
+        content: "";
+        display: block;
+        padding-top: rem(70px);
+        width: rem(75px);
+        height: rem(75px);
+        background-size: auto 100%;
+        background-image: url(/src/assets/images/kakao.svg);
+        background-repeat: no-repeat;
+    }
+
+    .menu-character__link::before {
+        @include desktop {
+            padding-top: rem(50px);
+            width: rem(50px);
+            height: rem(50px);
+        }
+    }
+
+    //캐릭터 이름
+    span {
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+        padding-top: rem(22px);
+        font-size: rem(12px);
+
+        @include desktop {
+            font-size: rem(14px);
+        }
+    }
+
+    //캐릭터 스프라이트
+    .apeach {
+        &::before {
             background-position: -75px 0;
         }
 
-        .muji {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -50px 0;
+            }
+        }
+    }
+
+    .muji {
+        &::before {
             background-position: -150px 0;
         }
 
-        .prodo {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -100px 0;
+            }
+        }
+    }
+
+    .prodo {
+        &::before {
             background-position: -225px 0;
         }
 
-        .neo {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -150px 0;
+            }
+        }
+    }
+
+    .neo {
+        &::before {
             background-position: -300px 0;
         }
 
-        .tube {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -200px 0;
+            }
+        }
+    }
+
+    .tube {
+        &::before {
             background-position: -375px 0;
         }
 
-        .jayz {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -250px 0;
+            }
+        }
+    }
+
+    .jayz {
+        &::before {
             background-position: -450px 0;
         }
 
-        .con {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -300px 0;
+            }
+        }
+    }
+
+    .con {
+        &::before {
             background-position: -525px 0;
         }
 
-        .chunsik {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -350px 0;
+            }
+        }
+    }
+
+    .chunsik {
+        &::before {
             background-position: -600px 0;
         }
 
-        .jordy {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -400px 0;
+            }
+        }
+    }
+
+    .jordy {
+        &::before {
             background-position: -675px 0;
         }
 
-        .scappy {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -450px 0;
+            }
+        }
+    }
+
+    .scappy {
+        &::before {
             background-position: -750px 0;
         }
 
-        .angmond {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -500px 0;
+            }
+        }
+    }
+
+    .angmond {
+        &::before {
             background-position: -825px 0;
         }
 
-        .penda {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -550px 0;
+            }
+        }
+    }
+
+    .penda {
+        &::before {
             background-position: -900px 0;
         }
 
-        .keroBerony {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -600px 0;
+            }
+        }
+    }
+
+    .keroBerony {
+        &::before {
             background-position: -975px 0;
         }
 
-        .dream {
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -650px 0;
+            }
+        }
+    }
+
+    .dream {
+        &::before {
             background-position: -1050px 0;
         }
-    }
 
-    //검색 - 카테고리 리스트
-    &-category {
-        @include flexbox(row, $flex-wrap: wrap);
-        padding: rem(12px) rem(20px);
-
-        &__item {
-            border: 1px solid $category-border-color;
-            border-radius: rem(51px);
-            padding: 6px 13px;
-            background-color: $white;
-            margin: 0 7px 9px 0;
+        &.menu-character__link::before {
+            @include desktop {
+                background-position: -700px 0;
+            }
         }
-
-        &__link {
-            height: 15px;
-            line-height: 1;
-            font-size: rem(14px);
-            white-space: nowrap;
-        }
-    }
-
-    // 검색 - 캐릭터, 카테고리 구분선
-    &__devide-line {
-        height: 1px;
-        display: block;
-        border: none;
-        background-color: $gray5;
-        margin: rem(24px) rem(20px);
-    }
-
-    // 데스크탑 기준 max-width 지정
-    @include desktop {
-        @include boxSizeMax(rem(654px));
-        background-color: $yellow;
     }
 }
