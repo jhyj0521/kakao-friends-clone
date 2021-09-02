@@ -122,7 +122,6 @@ buttonOther.addEventListener('click', () => {
         }
     });
 
-
     menuOther.classList.toggle('menu-other--active');
     buttonOther.classList.toggle('button-other--active')
 });
@@ -135,10 +134,10 @@ media.addListener((e) => {
         adBanner.setAttribute('style', 'transform:none');
     }
     //데스크탑
-    else{
-        if(!adBanner.classList.contains('ad-banner--active')){
+    else {
+        if (!adBanner.classList.contains('ad-banner--active')) {
             // headerWrap.setAttribute('style', 'transform:translateY(-65px)');
-        }else{
+        } else {
             // adBanner.setAttribute('style','transform:translateY(-155px)');
         }
     }
@@ -163,9 +162,9 @@ function create() {
 
 const desktopL = matchMedia("(min-width: 1200px)");
 let msnryL;
-desktopL.addEventListener(('change'), () => { 
-    if(desktopL.matches) {
-        if(!!msnry) {
+desktopL.addEventListener(('change'), () => {
+    if (desktopL.matches) {
+        if (!!msnry) {
             msnry.destroy();
             console.log(msnry);
         }
@@ -179,8 +178,8 @@ desktopL.addEventListener(('change'), () => {
 
 const desktop = matchMedia("(min-width: 768px)");
 let msnry;
-desktop.addEventListener(('change'), () => { 
-    if(desktop.matches) {
+desktop.addEventListener(('change'), () => {
+    if (desktop.matches) {
         msnry = create();
     } else {
         msnry.destroy();
@@ -189,14 +188,14 @@ desktop.addEventListener(('change'), () => {
 })
 
 function init() {
-    if(desktop.matches) {
+    if (desktop.matches) {
         msnry = create();
     }
-    if(desktop.matches) {
+    if (desktop.matches) {
         msnryL = create();
     }
 }
-setTimeout(function() {
+setTimeout(function () {
     init();
 }, 300);
 
@@ -225,19 +224,19 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-  
+
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-  
+
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-  
-  });
+});
+
 
 const feed = document.querySelector('.feed');
 // 버튼 더보기 누르면
@@ -245,4 +244,21 @@ more.addEventListener('click', () => {
     console.log(feed);
     main.appendChild(feed);
     console.log(1);
-})
+});
+
+const likebuttons = document.querySelectorAll(".actions__button-like");
+
+
+
+for (let i = 0; i < likebuttons.length; i++) {
+
+    let likebtn = likebuttons.item(i);
+
+    likebtn.addEventListener('click', () => {
+        if (likebtn.classList.contains("liked")) {
+            likebtn.classList.remove("liked");
+        } else {
+            likebtn.classList.add("liked");
+        }
+    });
+}
