@@ -113,7 +113,7 @@ buttonBannerClose.addEventListener('click', () => {
     // ad-banner--active 클래스 제거
     // headerWrap 배너 크기만큼 위로 이동
     adBanner.classList.remove('ad-banner--active');
-    headerWrap.setAttribute('style', 'transform:translateY(-65px)');
+    // headerWrap.setAttribute('style', 'transform:translateY(-65px)');
 });
 
 //멤버 메뉴 버튼
