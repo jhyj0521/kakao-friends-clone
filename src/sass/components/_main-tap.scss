@@ -2,7 +2,7 @@
 
 .main-tap {
     min-width: 394px;
-    margin-bottom: 73px;
+    margin-bottom: 20px;
 
     &__list {
         @include flexbox(row, center, center);

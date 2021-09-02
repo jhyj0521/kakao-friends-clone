@@ -9,13 +9,14 @@
     &-wrap {
         @include mobile {
             @include flexbox(row, space-between);
-            padding-top: 2.93333vw;
+            margin-top: rem(25px);
         }
 
         @include desktop {
             padding-top: rem(100px);
             text-align: center;
             transition: 400ms;
+            margin-bottom: rem(20px);
         }
 
     }
@@ -29,11 +30,26 @@
 
 .button-menu-open {
     order: -1;
+    display: block;
+    width: 19px;
+    height: 19px;
+    border: 0;
+    margin-left: 40px;
+    transform: scale(1.4);
+    background-color: transparent;
+    background-image: url(./../assets/images/hamburger_button.svg);
+    background-repeat: no-repeat;
 }
 
 @include desktop {
     .button-menu-open {
         display: none;
+    }
+}
+
+.logo {
+    @include mobile {
+        transform: scale(1.4);
     }
 }
 
@@ -47,8 +63,14 @@
     }
 
     [class*=utility__item]{
-        margin-right: 32px;
+        @include mobile {
+            margin-right: 20px;
+        }
+        @include desktop {
+            margin-right: 32px;
+        }
     }
+
 
     &__item-search {
         order: -1;
@@ -72,6 +94,13 @@
         background-color: transparent;
         background-image: url(./../assets/images/search_button.svg);
         background-repeat: no-repeat;
+    }
+
+    @include mobile {
+        &__button-global,
+        &__button-search {
+            transform: scale(1.4);
+        }
     }
 }
 
@@ -171,7 +200,7 @@
         
         position: absolute;
         right: 0;
-        margin-top: -22px;
+        margin-top: -42px;
     }
 }
 
