@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오프렌즈샵</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="main-tap.js"></script>
     <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
 </head>
@@ -294,7 +296,7 @@
             <!-- Feed-1 -->
             <article class="feed">
                 <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
+                    <a href="#" class="feed-header__image muji"></a>
                     <span class="feed-header__name">무지</span>
                     <time class="feed-header__date" datetime="2021.09.02">2021.09.02</time>
                 </header>
@@ -305,10 +307,57 @@
                         전지적 콘 시점 '무지 관찰 일기'
                         <무지는 오늘 무하지> 매주 목요일 기대해주세요.🔜
                     </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap">
-                            <img src="./assets/images/feed-image1.jpg">
+                    <!--스와이퍼 슬라이드1-->
+                    <div class="feed-contents swiper">
+                        <div class="image-slide swiper-wrapper">
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_1/feed_1-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_1/feed_1-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_1/feed_1-2.webp">
+                                    <img src="./../assets/images/feed_image/feed_1/feed_1-2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_1/feed_1-3.webp">
+                                    <img src="./../assets/images/feed_image/feed_1/feed_1-3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_1/feed_1-4.webp">
+                                    <img src="./../assets/images/feed_image/feed_1/feed_1-4.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_1/feed_1-5.webp">
+                                    <img src="./../assets/images/feed_image/feed_1/feed_1-5.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_1/feed_1-6.webp">
+                                    <img src="./../assets/images/feed_image/feed_1/feed_1-6.jpg" alt="">
+                                </picture>
+                            </div>
                         </div>
+                        <!-- 슬라이더 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 슬라이더 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                     <ul class="actions">
                         <li class="actions__item">
@@ -338,7 +387,7 @@
             <!-- Feed-2 -->
             <article class="feed">
                 <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
+                    <a href="#" class="feed-header__image chunsik"></a>
                     <span class="feed-header__name">춘식</span>
                     <time class="feed-header__date" datetime="2021.09.01">2021.09.01</time>
                 </header>
@@ -347,10 +396,57 @@
                     <p class="feed-contents__subcopy">새학기엔 뉴템이 필수!
                         귀염뽀짝 춘식이로 집중력 높여볼까?🐱
                     </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap">
-                            <img src="./assets/images/feed-image1.jpg">
+                    <!--스와이퍼 슬라이드2-->
+                    <div class="feed-contents swiper">
+                        <div class="image-slide swiper-wrapper">
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_2/feed_2-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_2/feed_2-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_2/feed_2-2.webp">
+                                    <img src="./../assets/images/feed_image/feed_2/feed_2-2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_2/feed_2-3.webp">
+                                    <img src="./../assets/images/feed_image/feed_2/feed_2-3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_2/feed_2-4.webp">
+                                    <img src="./../assets/images/feed_image/feed_2/feed_2-4.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_2/feed_2-5.webp">
+                                    <img src="./../assets/images/feed_image/feed_2/feed_2-5.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_2/feed_2-6.webp">
+                                    <img src="./../assets/images/feed_image/feed_2/feed_2-6.jpg" alt="">
+                                </picture>
+                            </div>
                         </div>
+                        <!-- 슬라이더 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 슬라이더 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                     <ul class="actions">
                         <li class="actions__item">
@@ -379,7 +475,13 @@
                 <ul class="related">
                     <li class="related__item">
                         <a href="#">
-                            <img src="" alt="이불 속 춘식이 마우스패드" class="related__item-image">
+                            <picture>
+                                <source media="(min-width: 300px)"
+                                    srcset="./../assets/images/product_image/product_chunsik/product_1.webp"
+                                    class="related__item-image">
+                                <img src="./../assets/images/product_image/product_chunsik/product_1.jpeg" alt=""
+                                    class="related__item-image">
+                            </picture>
                             <div class="related__item-info">
                                 <span>이불 속 춘식이 마우스패드</span><b>5,000원</b>
                             </div>
@@ -388,7 +490,13 @@
                     </li>
                     <li class="related__item">
                         <a href="#">
-                            <img src="" alt="춘식이 페이스 수첩" class="related__item-image">
+                            <picture>
+                                <source media="(min-width: 300px)"
+                                    srcset="./../assets/images/product_image/product_chunsik/product_2.webp"
+                                    class="related__item-image">
+                                <img src="./../assets/images/product_image/product_chunsik/product_2.jpeg" alt=""
+                                    class="related__item-image">
+                            </picture>
                             <div class="related__item-info">
                                 <span>춘식이 페이스 수첩</span><b>3,500원</b>
                             </div>
@@ -397,7 +505,13 @@
                     </li>
                     <li class="related__item">
                         <a href="#">
-                            <img src="" alt="수면바지 춘식이 젤펜" class="related__item-image">
+                            <picture>
+                                <source media="(min-width: 300px)"
+                                    srcset="./../assets/images/product_image/product_chunsik/product_3.webp"
+                                    class="related__item-image">
+                                <img src="./../assets/images/product_image/product_chunsik/product_3.jpeg" alt=""
+                                    class="related__item-image">
+                            </picture>
                             <div class="related__item-info">
                                 <span>수면바지 춘식이 젤펜</span><b>3,500원</b>
                             </div>
@@ -409,7 +523,7 @@
             <!-- Feed-3 -->
             <article class="feed">
                 <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
+                    <a href="#" class="feed-header__image chunsik"></a>
                     <span class="feed-header__name">춘식</span>
                     <time class="feed-header__date" datetime="2021.08.30">2021.08.30</time>
                 </header>
@@ -420,10 +534,92 @@
                         두 가지만 기억해✌🏻
                         분리수거함 그리고 콘센트 정리!😎
                     </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap fade">
-                            <img src="./assets/images/feed-image1.jpg">
+                    <!--스와이퍼 슬라이드3-->
+                    <div class="feed-contents swiper">
+                        <div class="image-slide swiper-wrapper">
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-2.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-3.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-4.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-4.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-5.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-5.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-6.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-6.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-7.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-7.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-8.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-8.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-9.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-9.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_3/feed_3-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_3/feed_3-1.jpg" alt="">
+                                </picture>
+                            </div>
                         </div>
+                        <!-- 슬라이더 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 슬라이더 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                     <ul class="actions">
                         <li class="actions__item">
@@ -449,11 +645,16 @@
                     </div>
                     <a href="#" class="feed-comment__link">댓글 달기</a>
                 </footer>
-
                 <ul class="related">
                     <li class="related__item">
                         <a href="#">
-                            <img src="" alt="편리한 분리수거함" class="related__item-image">
+                            <picture>
+                                <source media="(min-width: 300px)"
+                                    srcset="./../assets/images/product_image/product_chunsik/product_4.webp"
+                                    class="related__item-image">
+                                <img src="./../assets/images/product_image/product_chunsik/product_4.jpeg" alt=""
+                                    class="related__item-image">
+                            </picture>
                             <div class="related__item-info">
                                 <span>편리한 분리수거함</span><b>22,000원</b>
                             </div>
@@ -462,7 +663,13 @@
                     </li>
                     <li class="related__item">
                         <a href="#">
-                            <img src="" alt="콘센트 정리 트레이 라이언과 춘식" class="related__item-image">
+                            <picture>
+                                <source media="(min-width: 300px)"
+                                    srcset="./../assets/images/product_image/product_chunsik/product_5.webp"
+                                    class="related__item-image">
+                                <img src="./../assets/images/product_image/product_chunsik/product_5.jpeg" alt=""
+                                    class="related__item-image">
+                            </picture>
                             <div class="related__item-info">
                                 <span>콘센트 정리 트레이_라이언&춘식</span><b>39,000원</b>
                             </div>
@@ -474,7 +681,7 @@
             <!-- Feed-4 -->
             <article class="feed">
                 <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
+                    <a href="#" class="feed-header__image friends"></a>
                     <span class="feed-header__name">프렌즈 도감</span>
                     <time class="feed-header__date" datetime="2021.08.29">2021.08.29</time>
                 </header>
@@ -483,10 +690,64 @@
                     <p class="feed-contents__subcopy">전격 공개! 케로와 베로니의🐧
                         똑똑한 수분유지 비법!
                     </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap">
-                            <img src="./assets/images/feed-image1.jpg">
+                    <!--스와이퍼 슬라이드4-->
+                    <div class="feed-contents swiper">
+                        <div class="image-slide swiper-wrapper">
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_4/feed_4-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_4/feed_4-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_4/feed_4-2.webp">
+                                    <img src="./../assets/images/feed_image/feed_4/feed_4-2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_4/feed_4-3.webp">
+                                    <img src="./../assets/images/feed_image/feed_4/feed_4-3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_4/feed_4-4.webp">
+                                    <img src="./../assets/images/feed_image/feed_4/feed_4-4.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_4/feed_4-5.webp">
+                                    <img src="./../assets/images/feed_image/feed_4/feed_4-5.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_4/feed_4-6.webp">
+                                    <img src="./../assets/images/feed_image/feed_4/feed_4-6.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_4/feed_4-7.webp">
+                                    <img src="./../assets/images/feed_image/feed_4/feed_4-7.jpg" alt="">
+                                </picture>
+                            </div>
                         </div>
+                        <!-- 슬라이더 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 슬라이더 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                     <ul class="actions">
                         <li class="actions__item">
@@ -516,69 +777,7 @@
             <!-- Feed-5 -->
             <article class="feed">
                 <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
-                    <span class="feed-header__name">라이언</span>
-                    <time class="feed-header__date" datetime="2021.08.27">2021.08.27</time>
-                </header>
-                <section class="feed-contents">
-                    <h2 class="feed-contents__title">귀여움을 길~게🆙</h2>
-                    <p class="feed-contents__subcopy">꼬옥 껴안고 굿잠~😴
-                        기다리던 NEW 롱바디 필로우.🛌
-                    </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap">
-                            <img src="./assets/images/feed-image1.jpg">
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li class="actions__item">
-                            <button class="actions__button-like" type="button" aria-label="좋아요"></button>
-                        </li>
-                        <li class="actions__item">
-                            <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
-                        </li>
-                        <li class="actions__item">
-                            <button class="actions__button-share" type="button" aria-label="공유하기"></button>
-                        </li>
-                    </ul>
-                    <span class="feed-contents__like">
-                        좋아요
-                        <b class="feed-contents__like-count">1,533개</b>
-                    </span>
-                </section>
-                <footer class="feed-comment">
-                    <span class="feed-comment__count">댓글 454개</span>
-                    <div class="feed-comment__recent">
-                        <b>김*원</b>
-                        <p>지각해도 잠은 잘오겠네^^</p>
-                    </div>
-                    <a href="#" class="feed-comment__link">댓글 달기</a>
-                </footer>
-                <ul class="related">
-                    <li class="related__item">
-                        <a href="#">
-                            <img src="" alt="롱바디필로우 꿀잠라이언" class="related__item-image">
-                            <div class="related__item-info">
-                                <span>롱바디필로우_꿀잠라이언</span><b>49,000원</b>
-                            </div>
-                        </a>
-                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
-                    </li>
-                    <li class="related__item">
-                        <a href="#">
-                            <img src="" alt="롱바디필로우 춘식이" class="related__item-image">
-                            <div class="related__item-info">
-                                <span>롱바디필로우_춘식이</span><b>49,000원</b>
-                            </div>
-                        </a>
-                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
-                    </li>
-                </ul>
-            </article>
-            <!-- Feed-6 -->
-            <article class="feed">
-                <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
+                    <a href="#" class="feed-header__image ryan"></a>
                     <span class="feed-header__name">라이언</span>
                     <time class="feed-header__date" datetime="2021.08.26">2021.08.26</time>
                 </header>
@@ -586,9 +785,14 @@
                     <h2 class="feed-contents__title">여름 끝! 가을이 왔어🙌</h2>
                     <p class="feed-contents__subcopy">시원한 가을을 폰 속에 담아봐.🍂
                     </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap">
-                            <img src="./assets/images/feed-image1.jpg">
+                    <!--스와이퍼 슬라이드6-->
+                    <div class="image-slide swiper-wrapper">
+                        <div class="image-slide swiper-slide">
+                            <picture>
+                                <source media="(min-width: 300px)"
+                                    srcset="./../assets/images/feed_image/feed_6/feed_6-1.webp">
+                                <img src="./../assets/images/feed_image/feed_6/feed_6-1.jpg" alt="">
+                            </picture>
                         </div>
                     </div>
                     <a href="#" class="feed-contents__link">
@@ -622,10 +826,125 @@
                     <a href="#" class="feed-comment__link">댓글 달기</a>
                 </footer>
             </article>
+            <!-- Feed-6 -->
+            <article class="feed">
+                <header class="feed-header">
+                    <a href="#" class="feed-header__image ryan"></a>
+                    <span class="feed-header__name">라이언</span>
+                    <time class="feed-header__date" datetime="2021.08.27">2021.08.27</time>
+                </header>
+                <section class="feed-contents">
+                    <h2 class="feed-contents__title">귀여움을 길~게🆙</h2>
+                    <p class="feed-contents__subcopy">꼬옥 껴안고 굿잠~😴
+                        기다리던 NEW 롱바디 필로우.🛌
+                    </p>
+                    <!--스와이퍼 슬라이드7-->
+                    <div class="feed-contents swiper">
+                        <div class="image-slide swiper-wrapper">
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_5/feed_5-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_5/feed_5-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_5/feed_5-2.webp">
+                                    <img src="./../assets/images/feed_image/feed_5/feed_5-2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_5/feed_5-3.webp">
+                                    <img src="./../assets/images/feed_image/feed_5/feed_5-3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_5/feed_5-4.webp">
+                                    <img src="./../assets/images/feed_image/feed_5/feed_5-4.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_5/feed_5-5.webp">
+                                    <img src="./../assets/images/feed_image/feed_5/feed_5-5.jpg" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                        <!-- 슬라이더 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 슬라이더 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <ul class="actions">
+                        <li class="actions__item">
+                            <button class="actions__button-like" type="button" aria-label="좋아요"></button>
+                        </li>
+                        <li class="actions__item">
+                            <button class="actions__button-comment" type="button" aria-label="댓글보기"></button>
+                        </li>
+                        <li class="actions__item">
+                            <button class="actions__button-share" type="button" aria-label="공유하기"></button>
+                        </li>
+                    </ul>
+                    <span class="feed-contents__like">
+                        좋아요
+                        <b class="feed-contents__like-count">1,533개</b>
+                    </span>
+                </section>
+                <footer class="feed-comment">
+                    <span class="feed-comment__count">댓글 454개</span>
+                    <div class="feed-comment__recent">
+                        <b>김*원</b>
+                        <p>지각해도 잠은 잘오겠네^^</p>
+                    </div>
+                    <a href="#" class="feed-comment__link">댓글 달기</a>
+                </footer>
+                <ul class="related">
+                    <li class="related__item">
+                        <a href="#">
+                            <picture>
+                                <source media="(min-width: 300px)"
+                                    srcset="./../assets/images/product_image/product_ryan/product_1.webp"
+                                    class="related__item-image">
+                                <img src="./../assets/images/product_image/product_ryan/product_1.jpeg" alt=""
+                                    class="related__item-image">
+                            </picture>
+                            <div class="related__item-info">
+                                <span>롱바디필로우_꿀잠라이언</span><b>49,000원</b>
+                            </div>
+                        </a>
+                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                    </li>
+                    <li class="related__item">
+                        <a href="#">
+                            <picture>
+                                <source media="(min-width: 300px)"
+                                    srcset="./../assets/images/product_image/product_ryan/product_2.webp"
+                                    class="related__item-image">
+                                <img src="./../assets/images/product_image/product_ryan/product_2.jpeg" alt=""
+                                    class="related__item-image">
+                            </picture>
+                            <div class="related__item-info">
+                                <span>롱바디필로우_춘식이</span><b>49,000원</b>
+                            </div>
+                        </a>
+                        <button class="button-cart" type="button" aria-label="장바구니 담기"></button>
+                    </li>
+                </ul>
+            </article>
             <!-- Feed-7 -->
             <article class="feed">
                 <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
+                    <a href="#" class="feed-header__image chunsik"></a>
                     <span class="feed-header__name">춘식</span>
                     <time class="feed-header__date" datetime="2021.08.25">2021.08.25</time>
                 </header>
@@ -635,10 +954,50 @@
                         춘식이에게 동전을 맡겨주세요.🐱
                         저금하면 신나는 멜로디까지!🎶
                     </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap">
-                            <img src="./assets/images/feed-image1.jpg">
+                    <!--스와이퍼 슬라이드7-->
+                    <div class="feed-contents swiper">
+                        <div class="image-slide swiper-wrapper">
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_7/feed_7-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_7/feed_7-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_7/feed_7-2.webp">
+                                    <img src="./../assets/images/feed_image/feed_7/feed_7-2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_7/feed_7-3.webp">
+                                    <img src="./../assets/images/feed_image/feed_7/feed_7-3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_7/feed_7-4.webp">
+                                    <img src="./../assets/images/feed_image/feed_7/feed_7-4.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_7/feed_7-5.webp">
+                                    <img src="./../assets/images/feed_image/feed_7/feed_7-5.jpg" alt="">
+                                </picture>
+                            </div>
                         </div>
+                        <!-- 슬라이더 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 슬라이더 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -674,7 +1033,7 @@
             <!-- Feed-8 -->
             <article class="feed">
                 <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
+                    <a href="#" class="feed-header__image chunsik"></a>
                     <span class="feed-header__name">춘식</span>
                     <time class="feed-header__date" datetime="2021.08.24">2021.08.24</time>
                 </header>
@@ -684,10 +1043,43 @@
                     <p class="feed-contents__subcopy">바라만봐도 행복해지는🌸
                         오래오래 시들지 않고 옆을 지켜줄게요.
                     </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap">
-                            <img src="./assets/images/feed-image1.jpg">
+                    <!--스와이퍼 슬라이드8-->
+                    <div class="feed-contents swiper">
+                        <div class="image-slide swiper-wrapper">
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_8/feed_8-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_8/feed_8-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_8/feed_8-2.webp">
+                                    <img src="./../assets/images/feed_image/feed_8/feed_8-2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_8/feed_8-3.webp">
+                                    <img src="./../assets/images/feed_image/feed_8/feed_8-3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_8/feed_8-4.webp">
+                                    <img src="./../assets/images/feed_image/feed_8/feed_8-4.jpg" alt="">
+                                </picture>
+                            </div>
                         </div>
+                        <!-- 슬라이더 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 슬라이더 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                     <a href="#" class="feed-contents__link">
                         <div class="feed-contents__link-box">
@@ -723,7 +1115,7 @@
             <!-- Feed-9 -->
             <article class="feed">
                 <header class="feed-header">
-                    <a href="#" class="feed-header__image"></a>
+                    <a href="#" class="feed-header__image chury"></a>
                     <span class="feed-header__name">츄라이 프렌즈</span>
                     <time class="feed-header__date" datetime="2021.08.23">2021.08.23</time>
                 </header>
@@ -732,10 +1124,50 @@
                     <p class="feed-contents__subcopy">리뷰는 우리에게 맡겨줘!
                         츄라이 프렌즈 커밍 SOON~👍
                     </p>
-                    <div class="feed-contents__image">
-                        <div class="image-slide__wrap">
-                            <img src="./assets/images/feed-image1.jpg">
+                    <!--스와이퍼 슬라이드9-->
+                    <div class="feed-contents swiper">
+                        <div class="image-slide swiper-wrapper">
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_9/feed_9-1.webp">
+                                    <img src="./../assets/images/feed_image/feed_9/feed_9-1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_9/feed_9-2.webp">
+                                    <img src="./../assets/images/feed_image/feed_9/feed_9-2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_9/feed_9-3.webp">
+                                    <img src="./../assets/images/feed_image/feed_9/feed_9-3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_9/feed_9-4.webp">
+                                    <img src="./../assets/images/feed_image/feed_9/feed_9-4.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="image-slide swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 300px)"
+                                        srcset="./../assets/images/feed_image/feed_9/feed_9-5.webp">
+                                    <img src="./../assets/images/feed_image/feed_9/feed_9-5.jpg" alt="">
+                                </picture>
+                            </div>
                         </div>
+                        <!-- 슬라이더 페이지네이션 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 슬라이더 버튼 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                     <ul class="actions">
                         <li class="actions__item">
@@ -805,4 +1237,5 @@
             </div>
         </footer>
 </body>
+
 </html>

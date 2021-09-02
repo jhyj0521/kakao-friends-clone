@@ -19,10 +19,31 @@
             float: left;
             width: rem(40px);
             height: rem(40px);
-            background-image: url(../assets/images/ryan.svg);
+            background-image: url(../assets/images/character_feed_profile.webp);
             background-repeat: no-repeat;
+            background-size: auto 100%;
             margin-right: rem(10px);
             vertical-align: middle;
+
+            &.chury {
+                background-position: rem(-80px);
+            }
+
+            &.ryan {
+                background-position: rem(-240px);
+            }
+
+            &.muji {
+                background-position: rem(-280px);
+            }
+
+            &.chunsik {
+                background-position: rem(-40px);
+            }
+
+            &.friends {
+                background-position: rem(-160px);
+            }
         }
 
         &__name {
@@ -63,17 +84,16 @@
             line-height: 1.43;
         }
 
-        &__image {
-            div {
-                
-                img {
-                    display: block;
-                    width: 100%;
-                    border-radius: 10px;
-                    // height: 400px;
-                }
-            }
-        }
+        // &__image {
+        //     div {
+        //         img {
+        //             display: block;
+        //             width: 100%;
+        //             border-radius: 10px;
+        //             // height: 400px;
+        //         }
+        //     }
+        // }
 
         &__link {
             display: block;
@@ -105,7 +125,7 @@
 
         .actions {
             margin-top: rem(10px);
-            
+
             &__item {
                 float: left;
             }
@@ -212,7 +232,6 @@
                 width: rem(70px);
                 height: rem(70px);
                 background-size: cover;
-                margin-right: rem(10px);
             }
 
             a {
@@ -220,6 +239,8 @@
             }
 
             &-info {
+                margin-left: rem(10px);
+
                 span {
                     font-size: rem(14px);
                     color: $gray5;
@@ -251,8 +272,56 @@
         border-radius: 25px;
         width: 46%;
     }
-    
+
     @include desktopL {
         width: 30%;
+    }
+}
+
+// 피드 컨텐츠 스크롤
+.swiper {
+
+    &-slide {
+        width: 100%;
+        height: 100%;
+
+        source {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    //슬라이드 버튼 커스텀
+    &-button-prev:after {
+        content: "";
+        width: rem(30px);
+        height: rem(30px);
+        background-image: url(./../assets/images/arrow_down_white.svg);
+        background-size: 100% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        background-color: $black1;
+        transform: rotate(90deg);
+    }
+
+    &-button-next:after {
+        content: "";
+        width: rem(30px);
+        height: rem(30px);
+        background-image: url(./../assets/images/arrow_down_white.svg);
+        background-size: 100% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        background-color: $black1;
+        transform: rotate(-90deg);
     }
 }
