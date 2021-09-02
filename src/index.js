@@ -198,7 +198,7 @@ function init() {
 }
 setTimeout(function() {
     init();
-}, 3000);
+}, 300);
 
 
 // 애니메이션
