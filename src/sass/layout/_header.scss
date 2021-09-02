@@ -116,7 +116,7 @@
         padding: 0 rem(30px);
         background-color: $white;
         overflow: auto;
-
+        
         &--active {
             display: block;
             z-index: 1;
@@ -127,7 +127,7 @@
 .ad-banner {
     @include mobile {
         position: absolute;
-        top: 90px;
+        top: 110px;
         left: 20px;
         background-color: #fff;
         z-index: 2;
@@ -242,7 +242,6 @@
     }
 }
 
-
 .button-other {
     border: none;
     background: transparent;
@@ -277,9 +276,13 @@
 
 .button-menu-close {
     @include mobile {
+        display: inline-block;
+        background-color: #fff;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 2%;
+        right: 3%;
+        border: 0;
+        font-size: rem(30px);
     }
 
     @include desktop {
@@ -303,7 +306,7 @@
 
     .member {
         @include mobile {
-            margin-top: rem(50px);
+            margin-top: rem(70px);
         }
 
         @include desktop {
@@ -331,6 +334,7 @@
 
         &__link.login {
             font-weight: 700;
+            border-bottom: 1px solid $black1;
         }
 
         &__link.non-member-order {
@@ -348,13 +352,14 @@
         }
 
         &__item.shopping-basket {
-            margin-top: rem(100px);
+            margin-top: rem(110px);
         }
 
         &__item.order:after {
             content: "";
             display: block;
             border-bottom: 1px solid $gray2;
+            margin-bottom: rem(20px);
         }
     }
 
