@@ -24,6 +24,8 @@ const buttonMember = document.querySelector('.button-member');
 const menuMember = document.querySelector('.menu-member');
 const buttonOther = document.querySelector('.button-other');
 const menuOther = document.querySelector('.menu-other');
+const more = document.querySelector('.button-more');
+const main = document.querySelector('.main-content__today');
 
 // 네비게이션 열기 버튼 클릭 시 전체 메뉴 열림
 menuOpenBtn.addEventListener('click', () => {
@@ -194,7 +196,9 @@ function init() {
         msnryL = create();
     }
 }
-init();
+setTimeout(function() {
+    init();
+}, 150);
 
 
 // 애니메이션
@@ -235,3 +239,10 @@ const swiper = new Swiper('.swiper', {
   
   });
 
+const feed = document.querySelector('.feed');
+// 버튼 더보기 누르면
+more.addEventListener('click', () => {
+    console.log(feed);
+    main.appendChild(feed);
+    console.log(1);
+})
