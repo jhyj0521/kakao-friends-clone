@@ -232,6 +232,13 @@
                 width: rem(70px);
                 height: rem(70px);
                 background-size: cover;
+
+                &:hover{
+                    transform: scale(2.5);
+                    border-radius: 5px;
+                    border: 1px solid $gray9;
+                    background-color: white;
+                }
             }
 
             a {
