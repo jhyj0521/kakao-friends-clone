@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 const paths = {
@@ -101,6 +102,12 @@ module.exports = {
           ),
         },
       ],
+    }),
+    new ImageminPlugin({
+      disable: process.env.NODE_ENV !== 'production',
+      pngquant: {
+        quality: '95-100'
+      }
     }),
   ],
 };
