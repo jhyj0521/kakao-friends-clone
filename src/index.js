@@ -24,8 +24,8 @@ const buttonMember = document.querySelector('.button-member');
 const menuMember = document.querySelector('.menu-member');
 const buttonOther = document.querySelector('.button-other');
 const menuOther = document.querySelector('.menu-other');
-const more = document.querySelector('.button-more');
-const main = document.querySelector('.main-content__today');
+const container = document.querySelector('.container');
+const skeleton = document.querySelector('.skeleton');
 
 // 네비게이션 열기 버튼 클릭 시 전체 메뉴 열림
 menuOpenBtn.addEventListener('click', () => {
@@ -195,27 +195,25 @@ function init() {
         msnryL = create();
     }
 }
-setTimeout(function () {
-    init();
-}, 300);
-
 
 // 애니메이션
-anime({
-    targets: '.feed',
-    duration: function (t, i) {
-        return 600 + i * 75;
-    },
-    easing: 'easeOutExpo',
-    delay: function (t, i) {
-        return i * 50;
-    },
-    opacity: {
-        value: [0, 1],
-        easing: 'linear'
-    },
-    scale: [0, 1]
-});
+function animate() {
+    anime({
+        targets: '.feed',
+        duration: function (t, i) {
+            return 600 + i * 75;
+        },
+        easing: 'easeOutExpo',
+        delay: function (t, i) {
+            return i * 50;
+        },
+        opacity: {
+            value: [0, 1],
+            easing: 'linear'
+        },
+        scale: [0, 1]
+    });
+}
 
 
 
@@ -237,14 +235,13 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-
-const feed = document.querySelector('.feed');
-// 버튼 더보기 누르면
-more.addEventListener('click', () => {
-    console.log(feed);
-    main.appendChild(feed);
-    console.log(1);
-});
+// skeleton UI
+setTimeout(function () {
+    container.style.display = 'block';
+    skeleton.style.display = 'none';
+    animate();
+    init();
+}, 1000);
 
 const likebuttons = document.querySelectorAll(".actions__button-like");
 
@@ -262,3 +259,4 @@ for (let i = 0; i < likebuttons.length; i++) {
         }
     });
 }
+
