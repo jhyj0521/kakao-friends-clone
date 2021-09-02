@@ -6,6 +6,7 @@
 }
 
 .main-content__today {
+    position: relative;
     @include desktop {
         padding: 0 2%;
     }
@@ -24,9 +25,11 @@
 
 .button-top {
     display: block;
-    position: fixed;
-    right: 13px;
-    bottom: 13px;
+    position: sticky;
+    position: -webkit-sticky;
+    // right: 100%;
+    left: 95%;
+    bottom: 3%;
     width: 46px;
     height: 46px;
     border: 1px solid $gray9;
@@ -35,6 +38,6 @@
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: 17px 20px;
-    background-position: 12px;
+    background-position: 50%;
     z-index: 9999;
 }

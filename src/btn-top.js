@@ -4,7 +4,7 @@ var scrollToTopBtn = document.querySelector(".button-top");
 
 function handleScroll() {
   var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var GOLDEN_RATIO = 0.5;
+  var GOLDEN_RATIO = 0.3;
 
   if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
     //show button
