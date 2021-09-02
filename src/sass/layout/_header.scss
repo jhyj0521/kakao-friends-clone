@@ -7,8 +7,6 @@
     min-width: 394px;
 
     &-wrap {
-        background-color: pink;
-
         @include mobile {
             @include flexbox(row, space-between);
             padding-top: 2.93333vw;
@@ -227,6 +225,8 @@
     }
 
     @include desktop {
+        padding: 20px 0 20px 20px;
+
         &:after {
             content: "";
             width: rem(16px);
@@ -260,6 +260,7 @@
 
 // 메뉴 멤버
 .menu {
+    
 
     @include mobile {
         font-size: rem(20px);

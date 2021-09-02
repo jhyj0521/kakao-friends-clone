@@ -3,6 +3,7 @@
 .main {
     @include boxSizeMax();
     min-width: 394px;
+    margin-top: rem(30px);
 }
 
 .main-content__today {
