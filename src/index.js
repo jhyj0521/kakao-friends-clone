@@ -39,7 +39,7 @@ const searchWrap = document.querySelector('.search-wrap');
 const buttonBannerClose = document.querySelector('.ad-banner__button-close');
 const adBanner = document.querySelector('.ad-banner');
 const headerWrap = document.querySelector('.header-wrap');
-const media = matchMedia("screen and (min-width: 768px)"); 
+const media = matchMedia("screen and (min-width: 768px)");
 const buttonMember = document.querySelector('.button-member');
 const menuMember = document.querySelector('.menu-member');
 const buttonOther = document.querySelector('.button-other');
@@ -57,12 +57,47 @@ menuCloseBtn.addEventListener('click', () => {
 
 // 캐릭터 버튼 클릭시 리스트 토글
 buttonCharacter.addEventListener('click', () => {
+
+    buttonCategory.classList.forEach(element => {
+        if (element === 'button-category--active') {
+            buttonCategory.setAttribute('class', 'button-category');
+            menuCategory.setAttribute('class', 'menu-category');
+        }
+    });
+
+
+    buttonOther.classList.forEach(element => {
+        if (element === 'button-other--active') {
+            buttonOther.setAttribute('class', 'button-other');
+            menuOther.setAttribute('class', 'menu-other');
+        }
+    });
+
     menuCharacter.classList.toggle('menu-character--active');
+    buttonCharacter.classList.toggle('button-character--active');
 })
 
 // 카테고리 버튼 클릭시 리스트 토글
 buttonCategory.addEventListener('click', () => {
+
+
+    buttonCharacter.classList.forEach(element => {
+        if (element === 'button-character--active') {
+            buttonCharacter.setAttribute('class', 'button-character');
+            menuCharacter.setAttribute('class', 'menu-character');
+        }
+    });
+
+
+    buttonOther.classList.forEach(element => {
+        if (element === 'button-other--active') {
+            buttonOther.setAttribute('class', 'button-other');
+            menuOther.setAttribute('class', 'menu-other');
+        }
+    });
+
     menuCategory.classList.toggle('menu-category--active');
+    buttonCategory.classList.toggle('button-category--active')
 })
 
 buttonSearch.addEventListener('click', () => {
@@ -88,15 +123,34 @@ buttonMember.addEventListener('click', () => {
 
 //기타 메뉴 버트
 buttonOther.addEventListener('click', () => {
+
+
+    buttonCharacter.classList.forEach(element => {
+        if (element === 'button-character--active') {
+            buttonCharacter.setAttribute('class', 'button-character');
+            menuCharacter.setAttribute('class', 'menu-character');
+        }
+    });
+
+
+    buttonCategory.classList.forEach(element => {
+        if (element === 'button-category--active') {
+            buttonCategory.setAttribute('class', 'button-category');
+            menuCategory.setAttribute('class', 'menu-category');
+        }
+    });
+
+
     menuOther.classList.toggle('menu-other--active');
+    buttonOther.classList.toggle('button-other--active')
 });
 
 
 media.addListener((e) => {
     //모바일
-    if(!e.matches){
+    if (!e.matches) {
         headerWrap.setAttribute('style', 'transform:none');
-        adBanner.setAttribute('style','transform:none');
+        adBanner.setAttribute('style', 'transform:none');
     }
     //데스크탑
     else{
