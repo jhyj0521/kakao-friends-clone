@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flamboyant-roentgen-c81b93.netlify.app/sitemap.xml
