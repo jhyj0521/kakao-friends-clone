@@ -124,7 +124,7 @@
         }
 
         .actions {
-            margin-top: rem(10px);
+            margin-top: rem(12px);
 
             &__item {
                 float: left;
@@ -132,16 +132,6 @@
 
             &__item:last-child {
                 float: right;
-            }
-
-            &__button-like {
-                border: 0;
-                width: rem(31x);
-                height: rem(31px);
-                padding: 0;
-                background-image: url(../assets/images/heart-burst.png);
-                background-color: transparent;
-                background-size: cover;
             }
 
             &__button-comment {
@@ -233,7 +223,7 @@
                 height: rem(70px);
                 background-size: cover;
 
-                &:hover{
+                &:hover {
                     transform: scale(2.5);
                     border-radius: 5px;
                     border: 1px solid $gray9;
@@ -330,5 +320,68 @@
         border-radius: 50%;
         background-color: $black1;
         transform: rotate(-90deg);
+    }
+}
+
+// 메인 피드 좋아요 버튼 애니메이션 추가
+
+.actions__button-like {
+    position: relative;
+    width: rem(31px);
+    height: rem(31px);
+    background: none;
+    border: none;
+}
+
+.actions__button-like:before {
+    position: absolute;
+    top: 0;
+    left: 13px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    width: 15px;
+    height: 25px;
+    border-radius: 40px 40px 0 0;
+    background-color: $gray4;
+    content: "";
+    cursor: pointer;
+    transition: background .4s;
+}
+
+.actions__button-like:after {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    width: 15px;
+    height: 25px;
+    border-radius: 40px 40px 0 0;
+    background-color: $gray4;
+    content: "";
+    cursor: pointer;
+    transition: background .4s;
+}
+
+.actions__button-like.liked::before,
+.actions__button-like.liked::after {
+    background-color: tomato;
+}
+
+.actions__button-like.liked {
+    animation: liked .4s ease;
+}
+
+@keyframes liked {
+    0% {
+        transform: scale(.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
