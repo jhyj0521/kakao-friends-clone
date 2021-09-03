@@ -302,9 +302,16 @@ setTimeout(() => {
     skeleton.style.display = 'none';
     init();
 }, 1000);
-setTimeout(() => {
-    animate();
-}, 1100)
+
+if (desktop.matches) {
+    setTimeout(() => {
+        animate();
+    }, 1100)
+} else {
+    setTimeout(() => {
+        animate();
+    }, 1000)
+}
 
 const likebuttons = document.querySelectorAll(".actions__button-like");
 
