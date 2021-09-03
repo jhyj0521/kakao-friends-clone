@@ -297,12 +297,14 @@ const swiper = new Swiper('.swiper', {
 });
 
 // skeleton UI
-setTimeout(function () {
+setTimeout(() => {
     container.style.display = 'block';
     skeleton.style.display = 'none';
-    animate();
     init();
 }, 1000);
+setTimeout(() => {
+    animate();
+}, 1100)
 
 const likebuttons = document.querySelectorAll(".actions__button-like");
 
