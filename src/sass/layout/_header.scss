@@ -33,8 +33,8 @@
     width: 19px;
     height: 19px;
     border: 0;
-    margin-left: 40px;
-    transform: scale(1.4);
+    margin-left: 30px;
+    transform: scale(1.3);
     background-color: transparent;
     background-image: url(./../assets/images/hamburger_button.svg);
     background-repeat: no-repeat;
@@ -48,12 +48,16 @@
 
 .logo {
     @include mobile {
-        transform: scale(1.4);
+        transform: scale(1.3);
     }
 }
 
 .utility {
     @include flexbox;
+
+    @include mobile{
+        margin-right: 16px;
+    }
 
     @include desktop {
         position: absolute;
@@ -62,9 +66,6 @@
     }
 
     [class*=utility__item]{
-        @include mobile {
-            margin-right: 20px;
-        }
         @include desktop {
             margin-right: 32px;
         }
@@ -73,6 +74,10 @@
 
     &__item-search {
         order: -1;
+
+        @include mobile{
+            margin-right: 25px;
+        }
     }
 
     &__button-global{
@@ -98,7 +103,7 @@
     @include mobile {
         &__button-global,
         &__button-search {
-            transform: scale(1.4);
+            transform: scale(1.3);
         }
     }
 }
@@ -118,7 +123,23 @@
         
         &--active {
             display: block;
-            z-index: 1;
+            z-index: 100;
+        }
+
+        &-bg{
+            @at-root .not-scroll{
+                overflow: hidden;
+                height: 100vh;
+            }
+
+            &--active{
+                background-color: rgba(0,0,0,0.7);
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                z-index: 99;
+            }
         }
     }
 }
@@ -133,13 +154,20 @@
     }
 
     @include desktop {
-        @include boxSizeFull();
+        @include boxSizeMax();
+        position: relative;
+        width: 100vw;
         height: 55px;
-        background-color: $yellow;
         text-align: center;
         display: none;
-        position: absolute;
-        top: 0;
+        
+
+        &-bg{
+            @include boxSizeFull();
+            position: absolute;
+            top: 0;
+            background-color: $yellow;
+        }
     }
 
     &--active {
@@ -154,8 +182,7 @@
         @include desktop {
             position: absolute;
             top: rem(15px);
-            right: 0;
-            width: 50%;
+            right: 20px;
             background: transparent;
             border: 0;
             font-size: 1.7rem;
@@ -208,9 +235,25 @@
 
     border: none;
     background: transparent;
+    &:after {
+        content: "";
+        width: rem(16px);
+        height: rem(16px);
+        background-image: url(./../assets/images/arrow_down_white.svg);
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-left: rem(4px);
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    &.is-active::after {
+        transform: rotate(180deg);
+    }
 
     @include mobile {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
         width: 100%;
         padding: rem(20px) 0;
         text-align: left;
@@ -222,22 +265,6 @@
     @include desktop {
         font-size: rem(18px);
         padding: 20px 0 20px 20px;
-
-        &:after {
-            content: "";
-            width: rem(16px);
-            height: rem(16px);
-            background-image: url(./../assets/images/arrow_down_white.svg);
-            background-repeat: no-repeat;
-            display: inline-block;
-            margin-left: rem(4px);
-            border-radius: 50%;
-            background-color: black;
-        }
-
-        &--active::after {
-            transform: rotate(180deg);
-        }
     }
 }
 
@@ -267,7 +294,7 @@
         }
 
 
-        &--active::after {
+        &.is-active::after {
             transform: rotate(180deg);
         }
     }
@@ -367,7 +394,7 @@
         white-space: nowrap;
         padding: 40px 28px 20px;
 
-        &--active {
+        &.is-active {
             display: block;
         }
 
@@ -383,16 +410,15 @@
     overflow: hidden;
     transition: 200ms ease;
     // transition-delay: 150ms;
-    @include flexbox($flex-wrap:wrap);
+    @include flexbox($align-items:center,$flex-wrap:wrap);
 
     @include desktop {
         @include boxSizeMax();
         width: 100vw;
         background-color: $yellow;
-        margin-top: 16px;
     }
 
-    &--active {
+    &.is-active {
         background-color: $yellow;
 
         @include mobile {
@@ -436,22 +462,36 @@
 
 .menu-category {
     // display: none;
-    @include flexbox($flex-wrap:wrap);
     @include boxSizeMax();
     height: 0;
     overflow: hidden;
     transition: 200ms;
-    margin-left: -100%;
-    width: 100vw;
-    justify-content: space-around;
     align-items: center;
 
+    @include mobile{
+        &.is-active{
+            height: rem(300px);
+            margin-top: 30px;
+        }
+        column-count: 2;
+        font-size: 18px;
+        color: $black1;
+
+        &__item{
+            margin-bottom: 40px;
+        }
+    }
+
     @include desktop {
-        &--active {
+        @include flexbox($flex-wrap:wrap);
+        margin-left: -100%;
+        width: 100vw;
+        justify-content: space-around;
+
+        &.is-active {
             @include boxSizeMax();
             @include flexbox($flex-wrap:wrap);
             width: 100vw;
-            margin-top: 16px;
             margin-left: -100%;
             padding: 15px 0 15px 0px;
             white-space: nowrap;
@@ -527,11 +567,10 @@
         align-items: center;
 
 
-        &--active {
+        &.is-active {
             @include boxSizeMax();
             @include flexbox($flex-wrap:wrap);
             width: 100vw;
-            margin-top: 16px;
             margin-left: -200%;
             padding: 15px 0 15px 0px;
             white-space: nowrap;
@@ -560,7 +599,7 @@
 
     &-wrap {
         background-color: $white;
-        z-index: 1;
+        z-index: 101;
         // display: none;
         transition: 400ms;
         width: 100vw;
@@ -583,7 +622,7 @@
             // transform: translateY(-115vw);
         }
 
-        &--active {
+        &.is-active {
             transform: none;
             height: 717px;
             // display: block;

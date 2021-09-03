@@ -5,14 +5,22 @@
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
-    padding: rem(24px) rem(80px) rem(24px) rem(60px);
-    background-image: url(../assets/images/story-more.png);
-    
-    // background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: 75% 47%;
+    padding: rem(24px) rem(60px);
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 4px;
     margin: 20px auto;
+
+    &:after {
+        content: "";
+        width: rem(16px);
+        height: rem(16px);
+        background-image: url(./../assets/images/arrow_down_white.svg);
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-left: rem(4px);
+        border-radius: 50%;
+        background-color: black;
+        vertical-align: top;
+    }
 }
